@@ -1,0 +1,37 @@
+body {
+            padding: 0px;
+            margin: 0px;
+}
+.header {
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+}
+#app {
+    background-color: #F2F0EA;
+    padding: 30px;
+}
+h1 {
+    margin: 0px;
+    color: purple;
+}
+.down {
+    display: flex;
+    margin-top: 30px;
+}
+.left {
+    width: 50%;
+}
+.right {
+    width: 50%;
+}
+textarea {
+    background-color: white;
+    width: 100%;
+}
+h4 {
+    font-size: 15px;
+}
+.right-textares {
+    margin-top: 27px;
+}

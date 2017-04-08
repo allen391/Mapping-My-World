@@ -1,0 +1,40 @@
+#app{
+    background-color: #F2F0EA;
+}
+#header{
+     display: flex;
+     justify-content: space-between;
+}
+h1{
+    margin-left: 50px;
+    margin-top: 50px;
+    color: purple;
+}
+img{
+    margin: 54px;
+    height: 54px;
+    width: 60px;
+}
+table{
+    width: 100%;
+    margin-left: 40px;
+}
+#table-header{
+    text-align: left;
+}
+.table-header-content{
+    color: purple;
+}
+#column-1-left{
+    background-color: white;
+    width: 60%;
+    height: 50px;
+}
+textarea{
+    width: 90%;
+    height: 50px;
+}
+.table-left-des{
+    margin-left: 20px;
+    padding-top: 10px;
+}

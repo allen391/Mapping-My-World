@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block app %}
+    <script src="/static/jquery-3.1.0.js"></script>
+    <script>
+        function send_request() {
+            alert("准备发送请求了啊12");
+            // 获取数据
+            var data = {
+                    'text1': $('#area1')[0].value,
+                    'text2': $('#area2')[0].value,
+                    'text3': $('#area3')[0].value,
+                    'text4': $('#area4')[0].value,
+            };
+            // 发送数据
+            $.ajax({
+                url: '/MMW/communication/',
+                method: 'POST',
+                data: data,
+                success: function(response) {
+                    alert("我收到你的请求了")
+                }
+            })
+            alert("ajax请求发送");
+        }
+    </script>
+    <style>
+        .submit {
+            background-color: #0f71b8;
+            color: white;
+            border: 0px;
+            border-radius: 12px;
+        }
+    </style>
+    <link rel="stylesheet" href="/static/mmw/communication.css">
+    <div id="app">
+        <div class="header">
+            <h1>The ways I communicate and make decisions</h1>
+            <img class="header-image" src="/static/mmw/image/capture.PNG">
+        </div>
+        <h3>Decision-making</h3>
+        <form method="POST" action="/MMW/communication/">
+            {% csrf_token %}
+            <div class="textarea-body">
+                <div class="input-block">
+                    <p>How I want to be involved</p>
+                    <div class="textarea-block">
+                        <textarea name="text1" id="area1">{{ Communication.text1 }}</textarea>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <p>Who I want to help me in my NDIS planning meeting</p>
+                    <div class="textarea-block">
+                        <textarea name="text2" id="area2">{{ Communication.text2 }}</textarea>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <p>What my NDIS representative needs to know about how I communicate </p>
+                    <div class="textarea-block">
+                        <textarea name="text3" id="area3">{{ Communication.text3 }}</textarea>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <p>Who makes the final decisions</p>
+                    <div class="textarea-block">
+                        <textarea name="text4" id="area4">{{ Communication.text4 }}</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <img src="/static/mmw/image/save.jpg" onclick="send_request()" >
+                <input class="submit" type="submit" value="next >">
+            </div>
+        </form>
+    </div>
+{% endblock %}

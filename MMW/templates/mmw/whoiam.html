@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block app %}
+    <script src="/static/mmw/initheight.js"></script>
+    <script src="/static/jquery-3.1.0.js"></script>
+    <script>
+        function send_request() {
+            alert("准备发送请求了啊12");
+            // 获取数据
+            var data = {
+                    'text1': $('#area1')[0].value,
+                    'text2': $('#area2')[0].value,
+                    'text3': $('#area3')[0].value,
+                    'text4': $('#area4')[0].value,
+            };
+            // 发送数据
+            $.ajax({
+                url: '/MMW/whoiam/',
+                method: 'POST',
+                data: data,
+                success: function(response) {
+                    alert("我收到你的请求了")
+                }
+            })
+            alert("ajax请求发送");
+        }
+    </script>
+    <style>
+        #app{
+            padding-top: 20px;
+            background-color: #F2F0EA;
+        }
+        h1{
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        img{
+            margin-top: 50px;
+            margin-right: 50px;
+            height: 80px;
+        }
+        #header{
+            display: flex;
+            justify-content: space-between;
+        }
+        #header-content{
+            margin-top: 50px;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        .textarea-body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .textarea-block{
+            background-color: white;
+            width: 100%;
+            height: 200px;
+            padding: 1%;
+
+        }
+        .input-block{
+            width: 40%;
+            height: 50%;
+            margin-right: 5%;
+            margin-top: 40px;
+            margin-left: 2%;
+
+        }
+        textarea{
+            width: 98%;
+            height: 98%;
+            background-color: lightblue;
+        }
+        .submit {
+            background-color: #0f71b8;
+            color: white;
+            border: 0px;
+            border-radius: 12px;
+        }
+    </style>
+
+    <div id="app">
+        <div id="header">
+            <h1>1. Who I am</h1>
+            <img src="/static/mmw/image/people.jpg">
+        </div>
+        <p id="header-content"><strong>My feeling, my beliefs and my attitudes are important to how i act, think and express myself</strong></p>
+        <form method="POST" action="/MMW/whoiam/">
+            {% csrf_token %}
+            <div class="textarea-body">
+                <div class="input-block">
+                    <p>What is important to me?</p>
+                    <div class="textarea-block">
+                        <textarea name="text1" id="area1"></textarea>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <p>What do I like about myself</p>
+                    <div class="textarea-block">
+                        <textarea name="text2" id="area2"></textarea>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <p>What dp other people like about me?</p>
+                    <div class="textarea-block">
+                        <textarea name="text3" id="area3"></textarea>
+                    </div>
+                </div>
+                <div class="input-block">
+                    <p>How to best support me</p>
+                    <div class="textarea-block">
+                        <textarea name="text4" id="area4"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <img src="/static/mmw/image/save.jpg" onclick="send_request()" >
+                <input class="submit" type="submit" value="next >">
+            </div>
+
+        </form>
+    </div>
+{% endblock %}

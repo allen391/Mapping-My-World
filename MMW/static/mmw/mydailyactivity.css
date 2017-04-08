@@ -1,0 +1,53 @@
+#app {
+    background-color: #F2F0EA;
+    padding: 20px;
+}
+h1{
+    color: purple;
+}
+.desc{
+}
+table {
+    width: 100%;
+}
+th {
+    font-weight: bold;
+    color: purple;
+}
+td {
+    width: 25%;
+}
+textarea {
+    width: 95%;
+    box-shadow: 10px 10px 5px #888888;
+}
+.day {
+    color: purple;
+    font-size: 18px;
+    font-weight: bold;
+}
+ul {
+    list-style:square url("/static/mmw/arrow.jpg");
+}
+li {
+    margin: 25px;
+}
+h4 {
+    color: purple;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+h6 {
+
+    margin: 5px;
+}
+.foot {
+    display: flex;
+    justify-content: space-between;
+}
+.foot-left {
+    width: 47%;
+}
+.foot-right {
+    width: 47%;
+}

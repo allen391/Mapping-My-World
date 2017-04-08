@@ -1,0 +1,134 @@
+{% extends "base.html" %}
+{% block app %}
+<style>
+#app-inner #app{
+    padding: 20px;
+    background-color: #F2F0EA;
+}
+#app-inner #down{
+    margin-top: 40px;
+}
+#app-inner #header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#app-inner #clock{
+    width: 50px;
+    height: 50px;
+}
+#app-inner h1{
+    margin-left: 30px;
+    color: purple;
+}
+#app-inner table{
+    width: 100%;
+}
+#app-inner ul {
+    list-style:square url("/staticw/image/arrow.jpg");
+}
+#app-inner li{
+    margin: 10px;
+}
+#app-inner textarea {
+    width: 90%;
+    margin-top: 30px;
+    box-shadow: 10px 10px 5px #888888;
+}
+</style>
+    <div id="app-inner">
+        <div id="header">
+            <h1>My daily activities</h1>
+            <div id="clock">
+                <img src="/staticw/image/clock.jpg">
+            </div>
+        </div>
+        <div id="down">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>What I do now:</th>
+                    <th>What is working well:</th>
+                    <th>What is not working well:</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                           <p class="day">Wednesday</p>
+                           <ul>
+                               <li>Morning<>
+                               <li>Afternoon<>
+                               <li>Evening<>
+                           </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td>
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td>
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                           <p class="day">Thursday</p>
+                           <ul>
+                               <li>Morning<>
+                               <li>Afternoon<>
+                               <li>Evening<>
+                           </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td>
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td>
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr><tr>
+                    <td>
+                        <div>
+                           <p class="day">Friday</p>
+                           <ul>
+                               <li>Morning<>
+                               <li>Afternoon<>
+                               <li>Evening<>
+                           </ul>
+                        </div>
+                    </td>
+                    <td>
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td>
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td>
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+<script>
+    var send_data = function() {
+        console.log("准备发送数据")
+        $.ajax({
+            url: "/MMW/index/",
+            type: "post",
+            data: {
+                key: 'value',
+                text1: 'text1',
+            },
+        });
+    }
+</script>
+<input type="button" onclick="send_data()" value="点我">
+{% endblock %}

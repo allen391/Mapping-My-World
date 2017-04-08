@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/bootstrap3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/datetimepicker/bootstrap-datetimepicker.min.css">
+</head>
+<body>
+    <div id="app">
+        <div class="left-menu">
+            {% include 'mmw/includes/list.html' %}
+        </div>
+        <div class="right-content">
+            <form method="POST" action="/MMW/whoiam/">
+                {% csrf_token %}
+                <h4>What is important to me</h4>
+                <textarea id="area1" name="text1"  class="form-control" >{{whoiam.text1}}</textarea>
+                <h4>What is important to me</h4>
+                <textarea id="area2" name="text2" class="form-control" >{{whoiam.text2}}</textarea>
+                <h4>What do other people like about me?</h4>
+                <textarea id="area3" name="text3" class="form-control" >{{whoiam.text3}}</textarea>
+                <h4>How to best support me:</h4>
+                <textarea id="area4" name="text4"  class="form-control" >{{whoiam.text4}}</textarea>
+                <input type="submit" value="submit"></input>
+            </form>
+        </div>
+         <span id="flip" onclick="show()"> username: {{userinfo.name}}</span>
+        <div id="panel">
+            <a>change account</a>
+            <a href="/MMW/logout/">logout</a>
+        </div>
+        <script>
+            function show(){
+                $("#panel").slideToggle('slow', function(){})
+            }
+        </script>
+    </div>
+    <link rel="stylesheet/less" type="text/css" href="/static/mmw/register_after.css" />
+    <script src="/static/less.min.js" type="text/javascript"></script>
+    <script src="/static/jquery-3.1.0.js"></script>
+    <script src="/static/bootstrap3/js/tether.min.js"></script>
+    <script src="/static/bootstrap3/js/bootstrap.min.js"></script>
+</body>
+</html>
