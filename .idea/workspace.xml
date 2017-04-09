@@ -2,19 +2,84 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fed9ebd-667d-4f04-a999-18cf3a013fd1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MMW/static/mmw/image/importance_bg.jpg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MMW/static/mmw/register_after.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/image/save.jpg" afterPath="$PROJECT_DIR$/MMW/static/mmw/image/save.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/admin.py" afterPath="$PROJECT_DIR$/MMW/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/apps.py" afterPath="$PROJECT_DIR$/MMW/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/MMW/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/migrations/0002_auto_20170327_0357.py" afterPath="$PROJECT_DIR$/MMW/migrations/0002_auto_20170327_0357.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/migrations/0003_auto_20170402_2007.py" afterPath="$PROJECT_DIR$/MMW/migrations/0003_auto_20170402_2007.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/migrations/0004_userinfo_whoiam.py" afterPath="$PROJECT_DIR$/MMW/migrations/0004_userinfo_whoiam.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/migrations/0005_auto_20170403_0155.py" afterPath="$PROJECT_DIR$/MMW/migrations/0005_auto_20170403_0155.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/models.py" afterPath="$PROJECT_DIR$/MMW/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/bootstrap3/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/MMW/static/bootstrap3/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/bootstrap3/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/MMW/static/bootstrap3/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/bootstrap3/css/bootstrap.css" afterPath="$PROJECT_DIR$/MMW/static/bootstrap3/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/bootstrap3/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/MMW/static/bootstrap3/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/bootstrap3/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/MMW/static/bootstrap3/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/bootstrap3/js/bootstrap.js" afterPath="$PROJECT_DIR$/MMW/static/bootstrap3/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/bootstrap3/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/MMW/static/bootstrap3/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/bootstrap3/js/npm.js" afterPath="$PROJECT_DIR$/MMW/static/bootstrap3/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/datetimepicker/bootstrap-datetimepicker.js" afterPath="$PROJECT_DIR$/MMW/static/datetimepicker/bootstrap-datetimepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/datetimepicker/bootstrap-datetimepicker.min.css" afterPath="$PROJECT_DIR$/MMW/static/datetimepicker/bootstrap-datetimepicker.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/datetimepicker/bootstrap-datetimepicker.zh-CN.js" afterPath="$PROJECT_DIR$/MMW/static/datetimepicker/bootstrap-datetimepicker.zh-CN.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/jquery-3.1.0.js" afterPath="$PROJECT_DIR$/MMW/static/jquery-3.1.0.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/less.min.js" afterPath="$PROJECT_DIR$/MMW/static/less.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/activity.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/activity.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/basic.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/basic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/bootstrap-fileupload.min.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/bootstrap-fileupload.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/bootstrap-social.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/bootstrap-social.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/bootstrap.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/custom.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/error.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/error.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/font-awesome.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/invoice.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/invoice.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/prettyPhoto.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/prettyPhoto.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/pricing.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/pricing.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/wizard/jquery.steps.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/wizard/jquery.steps.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/wizard/normalize.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/wizard/normalize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/css/wizard/wizardMain.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/css/wizard/wizardMain.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/bootstrap-fileupload.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/bootstrap-fileupload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/bootstrap.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/custom.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/galleryCustom.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/galleryCustom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/jquery-1.10.2.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/jquery-1.10.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/jquery.metisMenu.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/jquery.metisMenu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/jquery.mixitup.min.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/jquery.mixitup.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/jquery.prettyPhoto.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/jquery.prettyPhoto.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/wizard/jquery.cookie-1.3.1.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/wizard/jquery.cookie-1.3.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/wizard/jquery.steps.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/wizard/jquery.steps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/assets/js/wizard/modernizr-2.6.2.min.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/assets/js/wizard/modernizr-2.6.2.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/communication.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/communication.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/dailyactivity.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/dailyactivity.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/index.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/index.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/initheight.js" afterPath="$PROJECT_DIR$/MMW/static/mmw/initheight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/mydailyactivity.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/mydailyactivity.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/myhome.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/myhome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/supports.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/supports.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/weeklysupport.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/weeklysupport.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/base.html" afterPath="$PROJECT_DIR$/MMW/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/activity.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/activity.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/communication.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/communication.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/dailyactivity.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/dailyactivity.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/importance.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/importance.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/includes/list.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/includes/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/index.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/mydailyactivity.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/mydailyactivity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/myhome.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/myhome.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/register_after.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/register_after.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/supports.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/supports.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/userinfo.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/userinfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/weeklysupport.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/weeklysupport.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/whoiam.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/whoiam.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/tests.py" afterPath="$PROJECT_DIR$/MMW/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/urls.py" afterPath="$PROJECT_DIR$/MMW/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/views.py" afterPath="$PROJECT_DIR$/MMW/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled7/settings.py" afterPath="$PROJECT_DIR$/untitled7/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled7/urls.py" afterPath="$PROJECT_DIR$/untitled7/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/untitled7/wsgi.py" afterPath="$PROJECT_DIR$/untitled7/wsgi.py" />
     </list>
     <ignored path="untitled7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,8 +106,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MMW/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+            <state relative-caret-position="485">
+              <caret line="117" column="25" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -94,7 +159,7 @@
         <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/whoiam.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="103" column="67" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="67" />
+              <caret line="105" column="67" selection-start-line="105" selection-start-column="67" selection-end-line="105" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -673,7 +738,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491700827678</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add the record function&#10;fix the model&#10;modify the admin disply interface&#10;">
+      <created>1491747171470</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1491747171470</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -735,7 +807,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix the base.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the base.html" />
+    <MESSAGE value="add the record function&#10;fix the model&#10;modify the admin disply interface&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the record function&#10;fix the model&#10;modify the admin disply interface&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1096,8 +1169,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MMW/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+        <state relative-caret-position="485">
+          <caret line="117" column="25" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -1107,7 +1180,7 @@
     <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/whoiam.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="103" column="67" selection-start-line="103" selection-start-column="67" selection-end-line="103" selection-end-column="67" />
+          <caret line="105" column="67" selection-start-line="105" selection-start-column="67" selection-end-line="105" selection-end-column="67" />
           <folding />
         </state>
       </provider>

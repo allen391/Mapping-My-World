@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login
 from django.contrib.auth import logout
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
 from . import models
 import uuid
 
@@ -107,12 +108,16 @@ class WhoIAmView(LoginRequiredMixin, TemplateView):
             instance.text3 = text3
             instance.text4 = text4
             instance.save()
-            return render(request, "mmw/communication.html", {})
+
+            instance2 = models.Communication.objects.filter(user=request.user).first()
+            return HttpResponseRedirect('/MMW/communication/')
+            # return render(request, "mmw/communication.html", {"communication": instance2})
         else:
             whoiam = models.WhoIAm.objects.create(user=request.user, text1=text1, text2=text2, text3=text3, text4=text4)
             whoiam.save()
             instance2 = models.Communication.objects.filter(user=request.user).first()
-            return render(request, "mmw/communication.html", {"communication", instance2})
+            return HttpResponseRedirect('/MMW/communication/')
+            # return render(request, "mmw/communication.html", {"communication": instance2})
 
 
 class ImportanceView(LoginRequiredMixin, TemplateView):
