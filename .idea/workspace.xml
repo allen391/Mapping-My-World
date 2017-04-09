@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2fed9ebd-667d-4f04-a999-18cf3a013fd1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/importance.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/importance.html" />
     </list>
     <ignored path="untitled7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -747,7 +746,14 @@
       <option name="project" value="LOCAL" />
       <updated>1491780997250</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add the logout function&#10;adjust the &quot;invalid password or username &quot; warning">
+      <created>1491782098917</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1491782098917</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
