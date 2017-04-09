@@ -109,14 +109,14 @@
 <div id="app">
     <img id="bg-img" src="/static/mmw/image/importance_bg.jpg">
     <form>
-        <input id="my-family" name="my-family" type="text">
-        <input id="work-school" name="work-school" type="text">
-        <input id="very-close-top" name="very-close-top" type="text">
-        <input id="very-close-bottom" name="very-close-bottom" type="text">
-        <input id="very-close-left" name="very-close-left" type="text">
-        <input id="very-close-right" name="very-close-right" type="text">
-        <input id="friends" name="friends" type="text">
-        <input id="home-supporters" name="home-supporters" type="text">
+        <input id="area1" name="my-family" type="text">
+        <input id="area2" name="work-school" type="text">
+        <input id="area3" name="very-close-top" type="text">
+        <input id="area4" name="very-close-bottom" type="text">
+        <input id="area5" name="very-close-left" type="text">
+        <input id="area6" name="very-close-right" type="text">
+        <input id="area7" name="friends" type="text">
+        <input id="area8" name="home-supporters" type="text">
         <div class="bottom-button">
             <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" >
             <input class="submit" type="submit" value="next >">
@@ -128,14 +128,14 @@ function send_request() {
         alert("send request");
         // retrieve data
         var data = {
-                'my-family': $('#my-family')[0].value,
-                'work-school': $('#work-school')[0].value,
-                'very-close-top': $('#very-close-top')[0].value,
-                'very-close-bottom': $('very-close-bottom')[0].value,
-                'very-close-left': $('very-close-left')[0].value,
-                'very-close-right': $('very-close-right')[0].value,
-                'friends': $('friends')[0].value,
-                'home-supporters': $('home-supporters')[0].value,
+                'my-family': $('#area1')[0].value,
+                'work-school': $('#area2')[0].value,
+                'very-close-top': $('#area')[0].value,
+                'very-close-bottom': $('#area4')[0].value,
+                'very-close-left': $('#area5')[0].value,
+                'very-close-right': $('#area6')[0].value,
+                'friends': $('#area7')[0].value,
+                'home-supporters': $('#area8')[0].value,
         };
         // send data
         $.ajax({
