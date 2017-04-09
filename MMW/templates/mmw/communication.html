@@ -1,34 +1,23 @@
 {% extends "base.html" %}
 {% block app %}
     <script src="/static/jquery-3.1.0.js"></script>
-    <script>
-        function send_request() {
-            alert("准备发送请求了啊12");
-            // 获取数据
-            var data = {
-                    'text1': $('#area1')[0].value,
-                    'text2': $('#area2')[0].value,
-                    'text3': $('#area3')[0].value,
-                    'text4': $('#area4')[0].value,
-            };
-            // 发送数据
-            $.ajax({
-                url: '/MMW/communication/',
-                method: 'POST',
-                data: data,
-                success: function(response) {
-                    alert("我收到你的请求了")
-                }
-            })
-            alert("ajax请求发送");
-        }
-    </script>
     <style>
         .submit {
-            background-color: #0f71b8;
-            color: white;
-            border: 0px;
-            border-radius: 12px;
+        background-color: #0f71b8;
+        color: white;
+        width: 100px;
+        height: 50px;
+        border: 0px;
+        border-radius: 10px;
+        }
+        .bottom-button {
+        margin-top: 109px;
+        margin-left: 1176px;
+        }
+        #save-image {
+        margin-right: 36px;
+        width: 100px;
+        height: 50px;
         }
     </style>
     <link rel="stylesheet" href="/static/mmw/communication.css">
@@ -44,33 +33,54 @@
                 <div class="input-block">
                     <p>How I want to be involved</p>
                     <div class="textarea-block">
-                        <textarea name="text1" id="area1">{{ Communication.text1 }}</textarea>
+                        <textarea name="text1" id="area1">{{ communication.text1 }}</textarea>
                     </div>
                 </div>
                 <div class="input-block">
                     <p>Who I want to help me in my NDIS planning meeting</p>
                     <div class="textarea-block">
-                        <textarea name="text2" id="area2">{{ Communication.text2 }}</textarea>
+                        <textarea name="text2" id="area2">{{ communication.text2 }}</textarea>
                     </div>
                 </div>
                 <div class="input-block">
                     <p>What my NDIS representative needs to know about how I communicate </p>
                     <div class="textarea-block">
-                        <textarea name="text3" id="area3">{{ Communication.text3 }}</textarea>
+                        <textarea name="text3" id="area3">{{ communication.text3 }}</textarea>
                     </div>
                 </div>
                 <div class="input-block">
                     <p>Who makes the final decisions</p>
                     <div class="textarea-block">
-                        <textarea name="text4" id="area4">{{ Communication.text4 }}</textarea>
+                        <textarea name="text4" id="area4">{{ communication.text4 }}</textarea>
                     </div>
                 </div>
             </div>
-
-            <div>
-                <img src="/static/mmw/image/save.jpg" onclick="send_request()" >
-                <input class="submit" type="submit" value="next >">
-            </div>
+            <div class="bottom-button">
+            <img id="save-image" src="/static/mmw/image/save.jpg" style="margin-left: 105px" onclick="send_request()" >
+            <input class="submit" type="submit" value="next >">
+        </div>
         </form>
     </div>
+<script>
+    function send_request() {
+        alert("send request");
+        // retrieve data
+        var data = {
+                'text1': $('#area1')[0].value,
+                'text2': $('#area2')[0].value,
+                'text3': $('#area3')[0].value,
+                'text4': $('#area4')[0].value,
+        };
+        // send data
+        $.ajax({
+            url: '/MMW/whoiam/',
+            method: 'POST',
+            data: data,
+            success: function(response) {
+                alert("receive request")
+            }
+        })
+        alert("ajax send request");
+    }
+</script>
 {% endblock %}

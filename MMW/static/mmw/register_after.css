@@ -1,9 +1,0 @@
-#app {
-	display: flex;
-
-	.left-menu {
-		ul {
-			list-style: none;
-		}
-	}
-}

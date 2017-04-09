@@ -18,7 +18,7 @@ class IndexView(TemplateView):
 
 
 class LoginView(TemplateView):
-    template_name = "mmw/register_after.html"
+    template_name = "mmw/whoiam.html"
 
     def post(self, request):
         print("you already upload details")
@@ -78,7 +78,7 @@ class UserInfoView(LoginRequiredMixin, TemplateView):
 
 class WhoIAmView(LoginRequiredMixin, TemplateView):
     login_url = "/"
-    template_name = "mmw/register_after.html"
+    template_name = "mmw/whoiam.html"
 
     def get(self, request):
         whoiam, created = models.WhoIAm.objects.get_or_create(user=request.user)
@@ -94,6 +94,14 @@ class WhoIAmView(LoginRequiredMixin, TemplateView):
         print(text1)
         instance = models.WhoIAm.objects.filter(user=request.user).first()
         if instance is not None:
+            #record the whoiam info
+            whoiamhistory = models.WhoIAmHistory.objects.create(user=request.user)
+            whoiamhistory.text1 = instance.text1
+            whoiamhistory.text2 = instance.text2
+            whoiamhistory.text3 = instance.text3
+            whoiamhistory.text4 = instance.text4
+            whoiamhistory.save()
+
             instance.text1 = text1
             instance.text2 = text2
             instance.text3 = text3
@@ -103,12 +111,46 @@ class WhoIAmView(LoginRequiredMixin, TemplateView):
         else:
             whoiam = models.WhoIAm.objects.create(user=request.user, text1=text1, text2=text2, text3=text3, text4=text4)
             whoiam.save()
-            return render(request, "mmw/communication.html", {})
+            instance2 = models.Communication.objects.filter(user=request.user).first()
+            return render(request, "mmw/communication.html", {"communication", instance2})
 
 
 class ImportanceView(LoginRequiredMixin, TemplateView):
     login_url = "/"
     template_name = "mmw/importance.html"
+
+    def get(self, request):
+        importance, created = models.Importance.objects.get_or_create(user=request.user)
+        print(importance.my_family)
+        return render(request, "mmw/importance.html", {})
+
+    def post(self, request):
+        print("your already upload your information")
+        text1 = request.POST["my-family"]
+        text2 = request.POST["work-school"]
+        text3 = request.POST["very-close-top"]
+        text4 = request.POST["very-close-bottom"]
+        text5 = request.POST["very-close-left"]
+        text6 = request.POST["very-close-right"]
+        text7 = request.POST["friends"]
+        text8 = request.POST["home-supporters"]
+        print(text1)
+        instance = models.Importance.objects.filter(user=request.user).first()
+        if instance is not None:
+            instance.my_family = text1
+            instance.work_school = text2
+            instance.very_close_top = text3
+            instance.very_close_bottom = text4
+            instance.very_close_left = text5
+            instance.very_close_right = text6
+            instance.friends = text7
+            instance.home_supporters = text8
+            instance.save()
+            return render(request, "mmw/importance.html", {})
+        else:
+            whoiam = models.WhoIAm.objects.create(user=request.user, text1=text1, text2=text2, text3=text3, text4=text4, text5=text5, text6=text6, text7=text7, text8=text8)
+            whoiam.save()
+            return render(request, "mmw/myhome.html", {})
 
 
 class communication(LoginRequiredMixin, TemplateView):
@@ -120,7 +162,7 @@ class communication(LoginRequiredMixin, TemplateView):
         return render(request, "mmw/communication.html", {"communication": communication})
 
     def post(self, request):
-        print("你上传了个人信息")
+        print("you already your information")
         text1 = request.POST["text1"]
         text2 = request.POST["text2"]
         text3 = request.POST["text3"]
@@ -128,6 +170,14 @@ class communication(LoginRequiredMixin, TemplateView):
         print(text1)
         instance = models.Communication.objects.filter(user=request.user).first()
         if instance is not None:
+            # record the communication content history
+            communicationhistory = models.CommunicationHistory.objects.create(user=request.user)
+            communicationhistory.text1 = instance.text1
+            communicationhistory.text2 = instance.text2
+            communicationhistory.text3 = instance.text3
+            communicationhistory.text4 = instance.text4
+            communicationhistory.save()
+
             instance.text1 = text1
             instance.text2 = text2
             instance.text3 = text3
