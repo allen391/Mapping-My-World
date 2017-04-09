@@ -87,7 +87,7 @@ class WhoIAmView(LoginRequiredMixin, TemplateView):
         return render(request, "mmw/whoiam.html", {"whoiam": whoiam})
 
     def post(self, request):
-        print("你上传了个人信息")
+        print("you upload the info")
         text1 = request.POST["text1"]
         text2 = request.POST["text2"]
         text3 = request.POST["text3"]
@@ -188,11 +188,11 @@ class communication(LoginRequiredMixin, TemplateView):
             instance.text3 = text3
             instance.text4 = text4
             instance.save()
-            return render(request, "mmw/importance.html", {})
+            return HttpResponseRedirect('/MMW/importance/')
         else:
             communication = models.Communication.objects.create(user=request.user, text1=text1, text2=text2, text3=text3, text4=text4)
             communication.save()
-            return render(request, "mmw/importance.html", {})
+            return HttpResponseRedirect('/MMW/importance/')
 
 
 class DailyactivityView(TemplateView):
