@@ -21,8 +21,8 @@ urlpatterns = [
     url(r'^register/$', views.RegisterView.as_view(), name="register"),
     url(r'^feeling/$', views.FellingView.as_view(), name="feeling"),
     url(r'^importance/$', views.ImportanceView.as_view(), name="importance"),
-
     # only for test
     url(r'^base/$', views.BaseView.as_view(), name="base"),
     url(r'^extend/$', views.ExtendView.as_view(), name="base"),
+    url(r'^health/$', views.HealthView.as_view(),name="health")
 ]

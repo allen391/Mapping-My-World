@@ -235,3 +235,6 @@ class BaseView(TemplateView):
 
 class ExtendView(TemplateView):
     template_name = "mmw/activity.html"
+
+class HealthView(TemplateView):
+    template_name = "mmw/health.html"
