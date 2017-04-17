@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% block app %}
+<script>
+    delete_parent = function () {
+        event.target.parentElement.innerHTML = "";
+    }
+    var add_textarea = function () {
+        textarea_dom = document.createElement('textarea');
+        delete_dom = document.createElement('button');
+        delete_dom.innerText = "delete";
+        delete_dom.addEventListener('click', delete_parent)
+        div_dom = document.createElement('div')
+        div_dom.appendChild(textarea_dom);
+        div_dom.appendChild(delete_dom);
+        parent_dom = document.getElementById('outer-ul');
+        parent_dom.appendChild(div_dom)
+    }
+</script>
+<style>
+    .textbox {
+        background-color: white;
+        margin-top: 19px;
+        height: 100px;
+    }
+    .inner-textarea {
+        width: 100%;
+        background-color: lightblue;
+        height: 70px;
+    }
+    .inner-span {
+       color: blueviolet;
+       font-weight: 900;
+    }
+    .outer-ul {
+        padding: 0;
+        margin-top: 20px;
+    }
+    .outer-textbox {
+        height: 100px;
+    }
+    .outer-textarea {
+        width: 100%;
+        text-align: left;
+        height: 88px;
+        background-color: lightblue;
+    }
+    #program-id {
+        margin-top: 40px;
+    }
+</style>
+<div id="app">
+    <div id="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>8. My programs and therapy supports</h1>
+                <img src="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Think about the programs and therapy supports you currently use</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3">
+                <div class="container-header">
+                    <span class="inner-span">Program</span>
+                    <div class="textbox">
+                        <span>[Example: Speech therapy]</span>
+                        <textarea class="inner-textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="container-header">
+                    <span class="inner-span">Who</span>
+                    <div class="textbox">
+                        <span>[Example: My speech therapist,Melissa]</span>
+                        <textarea class="inner-textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="container-header">
+                    <span class="inner-span">Purpose</span>
+                    <div class="textbox">
+                        <span><small>[Example: To help me communicate better]</small></span>
+                        <textarea class="inner-textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="container-header">
+                    <span class="inner-span">How often</span>
+                    <div class="textbox">
+                        <span>[Example: Once a week]</span>
+                        <textarea class="inner-textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-lg-3">
+                <div class="textbox">
+                    <span>[Example: Social group]</span>
+                    <textarea class="inner-textarea"></textarea>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="textbox">
+                    <span>[Example: Community group]</span>
+                    <textarea class="inner-textarea"></textarea>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="textbox">
+                    <span>[Example: Friendships]</span>
+                    <textarea class="inner-textarea"></textarea>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="textbox">
+                    <span>[Example: Every second week]</span>
+                    <textarea class="inner-textarea"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-ld-3">
+                <ul id="outer-ul">
+                    <div class="outer-textbox">
+                        <textarea class="outer-textarea"></textarea>
+                        <button>delete</button>
+                    </div>
+                </ul>
+                <button id="program-id" onclick="add_textarea()">add more content</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

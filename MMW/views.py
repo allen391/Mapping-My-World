@@ -233,8 +233,14 @@ class WeeklySupportView(TemplateView):
 class BaseView(TemplateView):
     template_name = "base.html"
 
+
 class ExtendView(TemplateView):
     template_name = "mmw/activity.html"
 
+
 class HealthView(TemplateView):
     template_name = "mmw/health.html"
+
+
+class ProgramView(TemplateView):
+    template_name = "mmw/program.html"
