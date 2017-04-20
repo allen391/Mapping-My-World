@@ -6,10 +6,13 @@
     }
     var add_textarea = function () {
         textarea_dom = document.createElement('textarea');
+        textarea_dom.className = "outer-textarea";
         delete_dom = document.createElement('button');
         delete_dom.innerText = "delete";
+        delete_dom.className = "delete-button"
         delete_dom.addEventListener('click', delete_parent)
         div_dom = document.createElement('div')
+        div_dom.className = "outer-textbox";
         div_dom.appendChild(textarea_dom);
         div_dom.appendChild(delete_dom);
         parent_dom = document.getElementById('outer-ul');
@@ -31,12 +34,9 @@
        color: blueviolet;
        font-weight: 900;
     }
-    .outer-ul {
-        padding: 0;
-        margin-top: 20px;
-    }
-    .outer-textbox {
-        height: 100px;
+    #outer-ul {
+        padding-left: 0px;
+        margin-top: 19px;
     }
     .outer-textarea {
         width: 100%;
@@ -130,7 +130,34 @@
                 <ul id="outer-ul">
                     <div class="outer-textbox">
                         <textarea class="outer-textarea"></textarea>
-                        <button>delete</button>
+                        <button class="delete-button" onclick="delete_parent()">delete</button>
+                    </div>
+                </ul>
+                <button id="program-id" onclick="add_textarea()">add more content</button>
+            </div>
+             <div class="col-md-3 col-ld-3">
+                <ul id="outer-ul">
+                    <div class="outer-textbox">
+                        <textarea class="outer-textarea"></textarea>
+                        <button class="delete-button" onclick="delete_parent()">delete</button>
+                    </div>
+                </ul>
+                <button id="program-id" onclick="add_textarea()">add more content</button>
+            </div>
+             <div class="col-md-3 col-ld-3">
+                <ul id="outer-ul">
+                    <div class="outer-textbox">
+                        <textarea class="outer-textarea"></textarea>
+                        <button class="delete-button" onclick="delete_parent()">delete</button>
+                    </div>
+                </ul>
+                <button id="program-id" onclick="add_textarea()">add more content</button>
+            </div>
+             <div class="col-md-3 col-ld-3">
+                <ul id="outer-ul">
+                    <div class="outer-textbox">
+                        <textarea class="outer-textarea"></textarea>
+                        <button class="delete-button" onclick="delete_parent()">delete</button>
                     </div>
                 </ul>
                 <button id="program-id" onclick="add_textarea()">add more content</button>
