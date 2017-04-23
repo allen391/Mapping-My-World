@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fed9ebd-667d-4f04-a999-18cf3a013fd1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MMW/templates/mmw/equipment.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/admin.py" afterPath="$PROJECT_DIR$/MMW/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/models.py" afterPath="$PROJECT_DIR$/MMW/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/base.html" afterPath="$PROJECT_DIR$/MMW/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/program.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/program.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/views.py" afterPath="$PROJECT_DIR$/MMW/views.py" />
     </list>
     <ignored path="untitled7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,21 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="communication.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/communication.html">
+      <file leaf-file-name="program.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/program.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1797">
-              <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+            <state relative-caret-position="-37">
+              <caret line="243" column="105" selection-start-line="243" selection-start-column="105" selection-end-line="243" selection-end-column="105" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="program.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/program.html">
+      <file leaf-file-name="equipment.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/equipment.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1177">
-              <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -97,8 +94,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MMW/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1276">
-              <caret line="303" column="48" selection-start-line="303" selection-start-column="48" selection-end-line="303" selection-end-column="48" />
+            <state relative-caret-position="62">
+              <caret line="290" column="32" selection-start-line="290" selection-start-column="32" selection-end-line="290" selection-end-column="32" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -201,10 +198,11 @@
         <option value="$PROJECT_DIR$/MMW/urls.py" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/bucket_list.html" />
         <option value="$PROJECT_DIR$/MMW/views.py" />
-        <option value="$PROJECT_DIR$/MMW/templates/mmw/program.html" />
         <option value="$PROJECT_DIR$/MMW/models.py" />
         <option value="$PROJECT_DIR$/MMW/admin.py" />
         <option value="$PROJECT_DIR$/MMW/templates/base.html" />
+        <option value="$PROJECT_DIR$/MMW/templates/mmw/program.html" />
+        <option value="$PROJECT_DIR$/MMW/templates/mmw/equipment.html" />
       </list>
     </option>
   </component>
@@ -215,8 +213,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="786" />
-    <option name="y" value="315" />
+    <option name="x" value="1003" />
+    <option name="y" value="280" />
     <option name="width" value="1694" />
     <option name="height" value="986" />
   </component>
@@ -763,11 +761,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492956384842</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix the program page">
+      <created>1492962979420</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1492962979420</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="786" y="315" width="1694" height="986" extended-state="0" />
+    <frame x="1003" y="280" width="1694" height="986" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23561811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -848,13 +853,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/untitled7/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MMW/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1126,7 +1124,7 @@
         <state relative-caret-position="370">
           <caret line="51" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="14" />
           <folding>
-            <element signature="e#1005#1028#0#HTML" expanded="true" />
+            <element signature="e#1005#1028#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1189,16 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="303" column="48" selection-start-line="303" selection-start-column="48" selection-end-line="303" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MMW/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1129">
@@ -1207,10 +1195,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="290" column="32" selection-start-line="290" selection-start-column="32" selection-end-line="290" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/program.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1177">
-          <caret line="227" column="0" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+        <state relative-caret-position="-37">
+          <caret line="243" column="105" selection-start-line="243" selection-start-column="105" selection-end-line="243" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/equipment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
           <folding />
         </state>
       </provider>

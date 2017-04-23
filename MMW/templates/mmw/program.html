@@ -27,6 +27,7 @@
         data_list2 = [];
         data_list3 = [];
         data_list4 = [];
+        data_list5 = [];
         data_list1.push($('#therapy')[0].value);
         data_list1.push($('#social-group')[0].value);
         data_list2.push($('#therapist')[0].value);
@@ -35,6 +36,7 @@
         data_list3.push($('#friendship')[0].value);
         data_list4.push($('#second-week')[0].value);
         data_list4.push($('#week')[0].value);
+        data_list5.push($('#not-currently-use')[0].value);
         full_data = {
 
         };
@@ -54,6 +56,7 @@
             data_list4.push(doms4[i].value)
         }
         full_data['often'] = data_list4;
+        full_data['not_currently_use'] = data_list5;
         alert("data_list");
         alert("send data");
         $.ajax({
@@ -95,6 +98,18 @@
     #program-id {
         margin-top: 40px;
     }
+    .last-textbox {
+        padding: 10px;
+        background-color: white;
+    }
+    .last-textarea {
+        background-color: lightblue;
+        width: 100%;
+        height: 200px;
+    }
+    .last-des {
+        margin-top: 75px;
+    }
 </style>
 <div id="app">
     <div id="container">
@@ -108,6 +123,7 @@
         <div class="row">
             <div class="col-md-6">
                 <p>Think about the programs and therapy supports you currently use</p>
+                <p>Think about the programs and therapy that might help you</p>
             </div>
         </div>
         <div class="row">
@@ -209,7 +225,7 @@
                 </ul>
                 <button id="program-id" onclick="add_textarea('outer-ul3')">add more content</button>
             </div>
-             <div class="col-md-3 col-ld-3">
+            <div class="col-md-3 col-ld-3">
                 <ul id="outer-ul4" class="outer-ul">
                     {% for textarea in textareas.often_add %}
                     <div class="outer-textbox">
@@ -219,6 +235,14 @@
                     {% endfor %}
                 </ul>
                 <button id="program-id" onclick="add_textarea('outer-ul4')">add more content</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="last-des">Are there any programs and therapy you would like but not currently use?</p>
+                <div class="last-textbox">
+                    <textarea class="last-textarea" id="not-currently-use">{{ textareas.not_currently_use.0 }}</textarea>
+                </div>
             </div>
         </div>
         <input type="button" value="submit" onclick="submit_data()">
