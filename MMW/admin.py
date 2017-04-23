@@ -25,6 +25,7 @@ admin.site.register(models.WhoIAm, ContentAdmin)
 admin.site.register(models.Communication, ContentAdmin)
 admin.site.register(models.WhoIAmHistory, HistoryAdmin)
 admin.site.register(models.CommunicationHistory, HistoryAdmin)
+admin.site.register(models.Program)
 admin.site.register(models.MyHome, ContentAdmin)
 
 

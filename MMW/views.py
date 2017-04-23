@@ -281,8 +281,20 @@ class HealthView(TemplateView):
     template_name = "mmw/health.html"
 
 
-class ProgramView(TemplateView):
+class ProgramView(LoginRequiredMixin, TemplateView):
     template_name = "mmw/program.html"
+    login_url = '/'
+
+    def get(self, request):
+        instance = models.Program.objects.filter(user=request.user).first()
+        data = {'instance': instance}
+        if instance is not None:
+            data['textareas'] = json.loads(instance.data)
+            data['textareas']['program_add'] = data['textareas']['program'][2:]
+            data['textareas']['who_add'] = data['textareas']['who'][2:]
+            data['textareas']['purpose_add'] = data['textareas']['purpose'][2:]
+            data['textareas']['often_add'] = data['textareas']['often'][2:]
+        return render(request, "mmw/program.html", data)
 
     def post(self, request):
         data = json.loads(request.body.decode('utf8'))

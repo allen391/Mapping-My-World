@@ -124,7 +124,7 @@ def update_userinfo():
 
 
 class Program(models.Model):
-    User = models.OneToOneField(User)
+    user = models.OneToOneField(User)
     data = models.TextField("My programs and therapy supports: ")
 
 
