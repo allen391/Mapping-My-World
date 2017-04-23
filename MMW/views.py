@@ -4,9 +4,10 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login
 from django.contrib.auth import logout
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from . import models
 import uuid
+import json
 
 # Create your views here.
 
@@ -205,6 +206,7 @@ class FellingView(TemplateView):
 
 class LogoutView(TemplateView):
     template_name = "mmw/index.html"
+
     def get(self, request):
         logout(request)
         return render(request, "mmw/index.html", {"logout": True})
@@ -212,6 +214,35 @@ class LogoutView(TemplateView):
 
 class MyHomeView(TemplateView):
     template_name = "mmw/myhome.html"
+    login_url = '/'
+
+    def get(self, request):
+        myhome, created = models.MyHome.objects.get_or_create(user=request.user)
+        return render(request, "mmw/myhome.html", {"myhome": myhome})
+
+    def post(self, request):
+        text1 = request.POST["text1"]
+        text2 = request.POST["text2"]
+        text3 = request.POST["text3"]
+        text4 = request.POST["text4"]
+        text5 = request.POST["text5"]
+        instance = models.MyHome.objects.filter(user=request.user).first()
+        if instance is not None:
+            instance.text1 = text1
+            instance.text2 = text2
+            instance.text3 = text3
+            instance.text4 = text4
+            instance.text5 = text5
+            instance.save()
+            return HttpResponseRedirect('/MMW/dailyactivity/')
+        else:
+            myhome = models.MyHome.objects.create(user=request.user, text1=text1, text2=text2, text3=text3, text4=text4, text5=text5)
+            myhome.save()
+            return HttpResponseRedirect('/MMW/dailyactivity/')
+
+
+
+
 
 
 class ActivityView(TemplateView):
@@ -244,3 +275,10 @@ class HealthView(TemplateView):
 
 class ProgramView(TemplateView):
     template_name = "mmw/program.html"
+
+    def post(self, request):
+        data = json.loads(request.body.decode('utf8'))
+        prgoram_obj, created = models.Program.objects.get_or_create(user=request.user)
+        prgoram_obj.data = json.dumps(data, indent=4)
+        prgoram_obj.save()
+        return HttpResponse("save successfully")

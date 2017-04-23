@@ -78,14 +78,22 @@ class Importance(models.Model):
     very_close_right = models.TextField("Who makes the final decisions", max_length=128, null=True)
     friends = models.TextField("Who makes the final decisions", max_length=128, null=True)
     home_supporters = models.TextField("Who makes the final decisions", max_length=128, null=True)
-# class MyHome(models.Model):
-#     user = models.OneToOneField(User)
-#     text1 = models.TextField("What type of home i live in?", max_length=20)
-#     text2 = models.TextField("The people i usually live with:", max_length=20)
-#     text3 = models.TextField("Who helps me at home?", max_length=20)
-#     text4 = models.TextField("What do they help me with？", max_length=128)
-#     text5 = models.TextField("Do i use any equipment or other things to help me at home?", max_length=64)
-#
+
+
+class MyHome(models.Model):
+    user = models.OneToOneField(User)
+    text1 = models.TextField("What type of home i live in?", max_length=20)
+    text2 = models.TextField("The people i usually live with:", max_length=20)
+    text3 = models.TextField("Who helps me at home?", max_length=20)
+    text4 = models.TextField("What do they help me with？", max_length=128)
+    text5 = models.TextField("Do i use any equipment or other things to help me at home?", max_length=64)
+
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
 # class
 
 
@@ -113,6 +121,13 @@ def update_userinfo():
             communication.save()
         except:
             pass
+
+
+class Program(models.Model):
+    User = models.OneToOneField(User)
+    data = models.TextField("My programs and therapy supports: ")
+
+
 
 
 

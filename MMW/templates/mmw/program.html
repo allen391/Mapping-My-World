@@ -17,6 +17,37 @@
         div_dom.appendChild(delete_dom);
         parent_dom = document.getElementById('outer-ul');
         parent_dom.appendChild(div_dom)
+    };
+    submit_data = function () {
+        var doms1 = $('#outer-ul textarea');
+        data_list = [];
+        data_list.push($('#therapy')[0].value);
+        data_list.push($('#social-group'[0].value));
+        data_list.push($('#theraplist'[0].value));
+        data_list.push($('#communicate'[0].value));
+        data_list.push($('#community'[0].value));
+        data_list.push($('#friendship'[0].value));
+        data_list.push($('#second-week'[0].value));
+        data_list.push($('#week'[0].value));
+        full_data = {
+
+        };
+        for (var i=0; i<doms1.length; i++){
+            data_list.push(doms1[0].value)
+        }
+        full_data['program'] = data_list;
+        alert("data_list");
+        alert(data_list);
+        alert("send data");
+        $.ajax({
+                    url: '/MMW/program',
+                    type: 'post',
+                    data: JSON.stringify(full_data),
+                    success: function (response) {
+                        alert("retrieve data")
+                    }
+                }
+        )
     }
 </script>
 <style>
@@ -67,7 +98,7 @@
                     <span class="inner-span">Program</span>
                     <div class="textbox">
                         <span>[Example: Speech therapy]</span>
-                        <textarea class="inner-textarea"></textarea>
+                        <textarea class="inner-textarea" id="therapy"></textarea>
                     </div>
                 </div>
             </div>
@@ -76,7 +107,7 @@
                     <span class="inner-span">Who</span>
                     <div class="textbox">
                         <span>[Example: My speech therapist,Melissa]</span>
-                        <textarea class="inner-textarea"></textarea>
+                        <textarea class="inner-textarea" id="therapist"></textarea>
                     </div>
                 </div>
             </div>
@@ -85,7 +116,7 @@
                     <span class="inner-span">Purpose</span>
                     <div class="textbox">
                         <span><small>[Example: To help me communicate better]</small></span>
-                        <textarea class="inner-textarea"></textarea>
+                        <textarea class="inner-textarea" id="communicate"></textarea>
                     </div>
                 </div>
             </div>
@@ -94,7 +125,7 @@
                     <span class="inner-span">How often</span>
                     <div class="textbox">
                         <span>[Example: Once a week]</span>
-                        <textarea class="inner-textarea"></textarea>
+                        <textarea class="inner-textarea" id="week"></textarea>
                     </div>
                 </div>
             </div>
@@ -103,31 +134,31 @@
             <div class="col-md-3 col-lg-3">
                 <div class="textbox">
                     <span>[Example: Social group]</span>
-                    <textarea class="inner-textarea"></textarea>
+                    <textarea class="inner-textarea" id="social-group"></textarea>
                 </div>
             </div>
             <div class="col-md-3 col-lg-3">
                 <div class="textbox">
                     <span>[Example: Community group]</span>
-                    <textarea class="inner-textarea"></textarea>
+                    <textarea class="inner-textarea" id="community"></textarea>
                 </div>
             </div>
             <div class="col-md-3 col-lg-3">
                 <div class="textbox">
                     <span>[Example: Friendships]</span>
-                    <textarea class="inner-textarea"></textarea>
+                    <textarea class="inner-textarea" id="friendship"></textarea>
                 </div>
             </div>
             <div class="col-md-3 col-lg-3">
                 <div class="textbox">
                     <span>[Example: Every second week]</span>
-                    <textarea class="inner-textarea"></textarea>
+                    <textarea class="inner-textarea" id="second-week"></textarea>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3 col-ld-3">
-                <ul id="outer-ul">
+                <ul id="outer-ul" class="outer-ul1" >
                     <div class="outer-textbox">
                         <textarea class="outer-textarea"></textarea>
                         <button class="delete-button" onclick="delete_parent()">delete</button>
@@ -136,7 +167,7 @@
                 <button id="program-id" onclick="add_textarea()">add more content</button>
             </div>
              <div class="col-md-3 col-ld-3">
-                <ul id="outer-ul">
+                <ul id="outer-ul" class="outer-ul2">
                     <div class="outer-textbox">
                         <textarea class="outer-textarea"></textarea>
                         <button class="delete-button" onclick="delete_parent()">delete</button>
@@ -145,7 +176,7 @@
                 <button id="program-id" onclick="add_textarea()">add more content</button>
             </div>
              <div class="col-md-3 col-ld-3">
-                <ul id="outer-ul">
+                <ul id="outer-ul" class="outer-ul3">
                     <div class="outer-textbox">
                         <textarea class="outer-textarea"></textarea>
                         <button class="delete-button" onclick="delete_parent()">delete</button>
@@ -154,7 +185,7 @@
                 <button id="program-id" onclick="add_textarea()">add more content</button>
             </div>
              <div class="col-md-3 col-ld-3">
-                <ul id="outer-ul">
+                <ul id="outer-ul" class="outer-ul4">
                     <div class="outer-textbox">
                         <textarea class="outer-textarea"></textarea>
                         <button class="delete-button" onclick="delete_parent()">delete</button>
@@ -163,6 +194,7 @@
                 <button id="program-id" onclick="add_textarea()">add more content</button>
             </div>
         </div>
+        <input type="button" value="submit" onclick="submit_data()">
     </div>
 </div>
 {% endblock %}

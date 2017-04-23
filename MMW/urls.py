@@ -25,5 +25,5 @@ urlpatterns = [
     url(r'^base/$', views.BaseView.as_view(), name="base"),
     url(r'^extend/$', views.ExtendView.as_view(), name="base"),
     url(r'^health/$', views.HealthView.as_view(),name="health"),
-    url(r'^program$', views.ProgramView.as_view(), name='program')
+    url(r'^program/$', views.ProgramView.as_view(), name='program')
 ]

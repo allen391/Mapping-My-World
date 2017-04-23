@@ -9,35 +9,65 @@
             <img src="/static/mmw/image/flag.JPG">
         </div>
     </div>
+    <form method="post" action="/MMW/myhome">
+    {% csrf_token %}
     <div class="down">
         <div class="left col-md-6">
             <div class="input-block">
                 <h4>1. What type of Home I live in?</h4>
                 <p>(House, unit, share house, supported accommodation):</p>
-                <textarea></textarea>
+                <textarea name="text1" id="area1">{{ myhome.text1 }}</textarea>
             </div>
             <div class="input-block">
                 <h4>2. The people I usually live with:</h4>
-                <textarea></textarea>
+                <textarea name="text2" id="area2">{{ myhome.text2 }}</textarea>
             </div>
             <div class="input-block">
                 <h4>3. Who helps me at home</h4>
-                <textarea rows="7"></textarea>
+                <textarea rows="7" name="text3" id="area3">{{ myhome.text3 }}</textarea>
             </div>
             <div class="input-block">
                 <h4>4. What do they help me with?</h4>
-                <textarea rows="7"></textarea>
+                <textarea rows="7" name="text4" id="area4">{{ myhome.text4 }}</textarea>
             </div>
         </div>
         <div class="right col-md-6">
             <div class="input-block">
                 <h4>5. Do I use any equipment or other thins to help me at home?</h4>
-                <textarea class="right-textarea" rows="6"></textarea>
+                <textarea class="right-textarea" rows="6" name="text5" id="area5">{{ myhome.text5 }}</textarea>
             </div>
             <div>
                 <img src="/static/mmw/image/house.JPG">
             </div>
         </div>
     </div>
+    <div class="bottom-button">
+        <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" >
+        <input class="submit" type="submit" value="next >">
+        </div>
+    </form>
 </div>
+<script>
+    function send_request() {
+        alert("send request");
+        // retrieve data
+        var data = {
+                'text1': $('#area1')[0].value,
+                'text2': $('#area2')[0].value,
+                'text3': $('#area3')[0].value,
+                'text4': $('#area4')[0].value,
+                'text5': $('#area5')[0].value
+        };
+        // send data
+        $.ajax({
+            url: '/MMW/myhome/',
+            method: 'POST',
+            data: data,
+            success: function(response) {
+                alert("receive request")
+            }
+        });
+        alert("ajax send request");
+    }
+</script>
 {% endblock %}
