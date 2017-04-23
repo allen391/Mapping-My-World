@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block app %}
+<style>
+    .text-box {
+        margin-top: 2px;
+        padding: 10px;
+        background-color: white;
+    }
+    .text {
+        width: 100%;
+        height: 600px;
+        background-color: lightblue;
+    }
+    .container {
+        margin: 0px;
+    }
+    #question {
+        margin-top: 10%;
+    }
+    .dec {
+        margin-top: 5%;
+    }
+    p {
+        font-size: 18px;
+        margin-left: 5%;
+    }
+    h1 {
+        margin-left: 5%;
+    }
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>My ultimate bucket list</h1>
+        </div>
+        <div class="col-md-12">
+            <div class="dec">
+            <p>If you had one ultimate wish, what would it be？</p>
+            <p><small>Example: An overseas trip? To participate in a marathon? Go on a hot air balloon? To get married</p>
+            </div>
+        </div>
+        <form method="post" action="/MMW/short_term/">
+        <div class="col-md-12" style="margin-top: 0px">
+            <div class="text-box">
+                <textarea class="text" name="text" id="text"></textarea>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -2,19 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fed9ebd-667d-4f04-a999-18cf3a013fd1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MMW/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MMW/migrations/0002_auto_20170327_0357.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MMW/migrations/0003_auto_20170402_2007.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MMW/migrations/0004_userinfo_whoiam.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MMW/migrations/0005_auto_20170403_0155.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MMW/migrations/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MMW/static/mmw/image/short_term.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MMW/templates/mmw/bucket_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MMW/templates/mmw/long_term_dream.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MMW/templates/mmw/short_term_dream.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/admin.py" afterPath="$PROJECT_DIR$/MMW/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/models.py" afterPath="$PROJECT_DIR$/MMW/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/myhome.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/myhome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/myhome.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/myhome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/program.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/program.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/urls.py" afterPath="$PROJECT_DIR$/MMW/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/views.py" afterPath="$PROJECT_DIR$/MMW/views.py" />
     </list>
@@ -40,31 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="weeklysupport.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/weeklysupport.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="communication.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/communication.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1527">
+            <state relative-caret-position="1797">
               <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myhome.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/static/mmw/myhome.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -80,11 +52,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myhome.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="myhome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/myhome.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
               <caret line="36" column="97" selection-start-line="36" selection-start-column="97" selection-end-line="36" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="short_term_dream.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/short_term_dream.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="43" column="81" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="81" />
+              <folding>
+                <element signature="e#1010#1033#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="long_term_dream.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/long_term_dream.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="51" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="14" />
+              <folding>
+                <element signature="e#1005#1028#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bucket_list.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/bucket_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+              <folding>
+                <element signature="e#1007#1030#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MMW/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/python3.5.0/Lib/site-packages/django/views/generic/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -100,41 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/untitled7/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MMW/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4296">
-              <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+            <state relative-caret-position="94">
+              <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -150,6 +148,7 @@
         <option value="Python Script" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Jupyter Notebook" />
         <option value="HTML File" />
       </list>
     </option>
@@ -198,14 +197,18 @@
         <option value="$PROJECT_DIR$/MMW/templates/health.html" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/health.html" />
         <option value="$PROJECT_DIR$/MMW/templates/111.html" />
-        <option value="$PROJECT_DIR$/MMW/urls.py" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/communication.html" />
         <option value="$PROJECT_DIR$/MMW/static/mmw/myhome.css" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/program.html" />
-        <option value="$PROJECT_DIR$/MMW/views.py" />
         <option value="$PROJECT_DIR$/MMW/admin.py" />
         <option value="$PROJECT_DIR$/MMW/models.py" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/myhome.html" />
+        <option value="$PROJECT_DIR$/MMW/templates/mmw/short_term_dream.ipynb" />
+        <option value="$PROJECT_DIR$/MMW/templates/mmw/long_term_dream.html" />
+        <option value="$PROJECT_DIR$/MMW/templates/mmw/short_term_dream.html" />
+        <option value="$PROJECT_DIR$/MMW/views.py" />
+        <option value="$PROJECT_DIR$/MMW/urls.py" />
+        <option value="$PROJECT_DIR$/MMW/templates/mmw/bucket_list.html" />
       </list>
     </option>
   </component>
@@ -216,10 +219,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="879" />
-    <option name="y" value="128" />
+    <option name="x" value="827" />
+    <option name="y" value="599" />
     <option name="width" value="1694" />
-    <option name="height" value="1038" />
+    <option name="height" value="988" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -332,6 +335,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MMW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MMW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MMW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MMW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MMW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MMW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mmw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -348,8 +391,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\tool\pycharm\MMW\MMW" />
       <recent name="C:\tool\pycharm\MMW\MMW\static\mmw\image" />
+      <recent name="C:\tool\pycharm\MMW\MMW" />
       <recent name="C:\tool\pycharm\MMW\MMW\templates\mmw" />
       <recent name="C:\tool\pycharm\untitled7\MMW\templates" />
       <recent name="C:\tool\pycharm\untitled7\MMW\templates\mmw" />
@@ -703,11 +746,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492694652065</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add the function: submit data and retrieve data and display the data in the front page  for my home page">
+      <created>1492944604851</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1492944604851</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="879" y="128" width="1694" height="1038" extended-state="0" />
+    <frame x="827" y="599" width="1694" height="988" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23561811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -719,7 +769,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3966851" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41988304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -771,7 +821,8 @@
     <MESSAGE value="add the logout function&#10;adjust the &quot;invalid password or username &quot; warning" />
     <MESSAGE value="add the program page&#10;and create the function&quot; click a button to increase the textarea&quot;, however, it cannot inherit the style, need to be modified latter" />
     <MESSAGE value="add the function: once clikcing the &quot;add content &quot; button, it will increase the amount of the textareas." />
-    <option name="LAST_COMMIT_MESSAGE" value="add the function: once clikcing the &quot;add content &quot; button, it will increase the amount of the textareas." />
+    <MESSAGE value="add the function: submit data and retrieve data and display the data in the front page  for my home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the function: submit data and retrieve data and display the data in the front page  for my home page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -785,35 +836,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MMW/static/mmw/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/static/bootstrap3/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/register.html" />
-    <entry file="file://$PROJECT_DIR$/MMW/static/less.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/static/jquery-3.1.0.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/untitled7/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1060,14 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MMW/static/mmw/myhome.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
@@ -1100,24 +1114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4296">
-          <caret line="221" column="0" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/communication.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1527">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/program.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1126,11 +1122,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/short_term_dream.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="-1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/myhome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="36" column="97" selection-start-line="36" selection-start-column="97" selection-end-line="36" selection-end-column="97" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/python3.5.0/Lib/site-packages/django/views/generic/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/short_term_dream.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="43" column="81" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="81" />
+          <folding>
+            <element signature="e#1010#1033#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/long_term_dream.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="51" column="14" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="14" />
+          <folding>
+            <element signature="e#1005#1028#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="254" column="0" selection-start-line="254" selection-start-column="0" selection-end-line="254" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/communication.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1797">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/bucket_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="e#1007#1030#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

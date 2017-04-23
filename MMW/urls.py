@@ -25,5 +25,8 @@ urlpatterns = [
     url(r'^base/$', views.BaseView.as_view(), name="base"),
     url(r'^extend/$', views.ExtendView.as_view(), name="base"),
     url(r'^health/$', views.HealthView.as_view(),name="health"),
-    url(r'^program/$', views.ProgramView.as_view(), name='program')
+    url(r'^program/$', views.ProgramView.as_view(), name='program'),
+    url(r'^short_term/$', views.ShortTermView.as_view(), name='short_term'),
+    url(r'^long_term/$', views.LongTermView.as_view(), name='long_term'),
+    url(r'^bucket_list/$', views.BucketListView.as_view(), name='bucket_list')
 ]

@@ -212,7 +212,7 @@ class LogoutView(TemplateView):
         return render(request, "mmw/index.html", {"logout": True})
 
 
-class MyHomeView(TemplateView):
+class MyHomeView(LoginRequiredMixin, TemplateView):
     template_name = "mmw/myhome.html"
     login_url = '/'
 
@@ -241,8 +241,16 @@ class MyHomeView(TemplateView):
             return HttpResponseRedirect('/MMW/dailyactivity/')
 
 
+class ShortTermView(TemplateView):
+    template_name = 'mmw/short_term_dream.html'
 
 
+class LongTermView(TemplateView):
+    template_name = 'mmw/long_term_dream.html'
+
+
+class BucketListView(TemplateView):
+    template_name = 'mmw/bucket_list.html'
 
 
 class ActivityView(TemplateView):
