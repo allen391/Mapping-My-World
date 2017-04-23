@@ -4,7 +4,7 @@
     delete_parent = function () {
         event.target.parentElement.innerHTML = "";
     }
-    var add_textarea = function () {
+    var add_textarea = function (node_id) {
         textarea_dom = document.createElement('textarea');
         textarea_dom.className = "outer-textarea";
         delete_dom = document.createElement('button');
@@ -15,27 +15,43 @@
         div_dom.className = "outer-textbox";
         div_dom.appendChild(textarea_dom);
         div_dom.appendChild(delete_dom);
-        parent_dom = document.getElementById('outer-ul');
+        parent_dom = document.getElementById(node_id);
         parent_dom.appendChild(div_dom)
     };
     submit_data = function () {
         var doms1 = $('#outer-ul textarea');
-        data_list = [];
-        data_list.push($('#therapy')[0].value);
-        data_list.push($('#social-group'[0].value));
-        data_list.push($('#theraplist'[0].value));
-        data_list.push($('#communicate'[0].value));
-        data_list.push($('#community'[0].value));
-        data_list.push($('#friendship'[0].value));
-        data_list.push($('#second-week'[0].value));
-        data_list.push($('#week'[0].value));
+        var dom2 =
+        data_list1 = [];
+        data_list2 = [];
+        data_list3 = [];
+        data_list4 = [];
+        data_list1.push($('#therapy')[0].value);
+        data_list1.push($('#social-group'[0].value));
+        data_list2.push($('#theraplist'[0].value));
+        data_list3.push($('#communicate'[0].value));
+        data_list2.push($('#community'[0].value));
+        data_list3.push($('#friendship'[0].value));
+        data_list4.push($('#second-week'[0].value));
+        data_list4.push($('#week'[0].value));
         full_data = {
 
         };
         for (var i=0; i<doms1.length; i++){
-            data_list.push(doms1[0].value)
+            data_list1.push(doms1[0].value)
         }
-        full_data['program'] = data_list;
+        full_data['program'] = data_list1;
+        for (var i=0; i<doms2.length; i++){
+            data_list2.push(doms1[0].value)
+        }
+        full_data['program'] = data_list2;
+        for (var i=0; i<doms3.length; i++){
+            data_list3.push(doms1[0].value)
+        }
+        full_data['program'] = data_list3;
+        for (var i=0; i<doms4.length; i++){
+            data_list4.push(doms1[0].value)
+        }
+        full_data['program'] = data_list4;
         alert("data_list");
         alert(data_list);
         alert("send data");
@@ -65,7 +81,7 @@
        color: blueviolet;
        font-weight: 900;
     }
-    #outer-ul {
+    .outer-ul {
         padding-left: 0px;
         margin-top: 19px;
     }
@@ -158,40 +174,40 @@
         </div>
         <div class="row">
             <div class="col-md-3 col-ld-3">
-                <ul id="outer-ul" class="outer-ul1" >
+                <ul id="outer-ul" class="outer-ul" >
                     <div class="outer-textbox">
                         <textarea class="outer-textarea"></textarea>
                         <button class="delete-button" onclick="delete_parent()">delete</button>
                     </div>
                 </ul>
-                <button id="program-id" onclick="add_textarea()">add more content</button>
+                <button id="program-id" onclick="add_textarea('outer-ul')">add more content</button>
             </div>
              <div class="col-md-3 col-ld-3">
-                <ul id="outer-ul" class="outer-ul2">
+                <ul id="outer-ul2" class="outer-ul">
                     <div class="outer-textbox">
                         <textarea class="outer-textarea"></textarea>
                         <button class="delete-button" onclick="delete_parent()">delete</button>
                     </div>
                 </ul>
-                <button id="program-id" onclick="add_textarea()">add more content</button>
+                <button id="program-id" onclick="add_textarea('outer-ul2')">add more content</button>
             </div>
              <div class="col-md-3 col-ld-3">
-                <ul id="outer-ul" class="outer-ul3">
+                <ul id="outer-ul3" class="outer-ul">
                     <div class="outer-textbox">
                         <textarea class="outer-textarea"></textarea>
                         <button class="delete-button" onclick="delete_parent()">delete</button>
                     </div>
                 </ul>
-                <button id="program-id" onclick="add_textarea()">add more content</button>
+                <button id="program-id" onclick="add_textarea('outer-ul3')">add more content</button>
             </div>
              <div class="col-md-3 col-ld-3">
-                <ul id="outer-ul" class="outer-ul4">
+                <ul id="outer-ul4" class="outer-ul">
                     <div class="outer-textbox">
                         <textarea class="outer-textarea"></textarea>
                         <button class="delete-button" onclick="delete_parent()">delete</button>
                     </div>
                 </ul>
-                <button id="program-id" onclick="add_textarea()">add more content</button>
+                <button id="program-id" onclick="add_textarea('outer-ul4')">add more content</button>
             </div>
         </div>
         <input type="button" value="submit" onclick="submit_data()">
