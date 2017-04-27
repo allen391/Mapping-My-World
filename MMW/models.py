@@ -128,6 +128,9 @@ class Program(models.Model):
     data = models.TextField("My programs and therapy supports: ")
 
 
+class Equipment(models.Model):
+    user = models.OneToOneField(User)
+    data = models.TextField("My programs and therapy supports: ")
 
 
 

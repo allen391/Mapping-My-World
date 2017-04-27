@@ -302,3 +302,25 @@ class ProgramView(LoginRequiredMixin, TemplateView):
         prgoram_obj.data = json.dumps(data, indent=4)
         prgoram_obj.save()
         return HttpResponse("save successfully")
+
+
+
+class EquipmentView(LoginRequiredMixin, TemplateView):
+    template_name = "mmw/equipment.html"
+
+    def get(self, request):
+        instance = models.Equipment.objects.filter(user=request.user).first()
+        data = {'instance': instance}
+        if instance is not None:
+            data['textareas'] = json.loads(instance.data)
+            data['textareas']['program_add'] = data['textareas']['program'][2:]
+            data['textareas']['who_add'] = data['textareas']['who'][2:]
+            data['textareas']['purpose_add'] = data['textareas']['purpose'][2:]
+            data['textareas']['often_add'] = data['textareas']['often'][2:]
+        return render(request, "mmw/equipment.html", data)
+    def post(self, request):
+        data = json.loads(request.body.decode('utf8'))
+        equipment_obj, created = models.Equipment.objects.get_or_create(user=request.user)
+        equipment_obj.data = json.dumps(data, indent=4)
+        equipment_obj.save()
+        return HttpResponse("save successfully")

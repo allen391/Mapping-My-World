@@ -1,4 +1,275 @@
 {% extends 'base.html' %}
 {% block app %}
-    
+<script>
+    delete_parent = function () {
+        event.target.parentElement.innerHTML = "";
+    }
+    var add_textarea = function () {
+        var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
+        for (var i=0; i<=3; i++) {
+            var node_id = node_ids[i];
+            textarea_dom = document.createElement('textarea');
+            if (i==2) {
+                textarea_dom.className = "outer-textarea-delete outer-textarea";
+            } else {
+
+                textarea_dom.className = "outer-textarea";
+            }
+            if (i==2) {
+                delete_dom = document.createElement('button');
+                delete_dom.innerText = "delete";
+                delete_dom.className = "delete-button"
+                delete_dom.addEventListener('click', delete_parent)
+            }
+            div_dom = document.createElement('div')
+            div_dom.className = "outer-textbox";
+
+            div_dom.appendChild(textarea_dom);
+            if (i==2) {
+                div_dom.appendChild(delete_dom);
+            }
+            parent_dom = document.getElementById(node_id);
+            parent_dom.appendChild(div_dom)
+        }
+    };
+    submit_data = function () {
+        var doms1 = $('#outer-ul textarea');
+        var doms2 = $('#outer-ul2 textarea');
+        var doms3 = $('#outer-ul3 textarea');
+        var doms4 = $('#outer-ul4 textarea');
+        data_list1 = [];
+        data_list2 = [];
+        data_list3 = [];
+        data_list4 = [];
+        data_list5 = [];
+        data_list1.push($('#therapy')[0].value);
+        data_list1.push($('#social-group')[0].value);
+        data_list2.push($('#therapist')[0].value);
+        data_list3.push($('#communicate')[0].value);
+        data_list2.push($('#community')[0].value);
+        data_list3.push($('#friendship')[0].value);
+        data_list4.push($('#second-week')[0].value);
+        data_list4.push($('#week')[0].value);
+        data_list5.push($('#not-currently-use')[0].value);
+        full_data = {
+
+        };
+        for (var i=0; i<doms1.length; i++){
+            data_list1.push(doms1[i].value)
+        }
+        full_data['program'] = data_list1;
+        for (var i=0; i<doms2.length; i++){
+            data_list2.push(doms2[i].value)
+        }
+        full_data['who'] = data_list2;
+        for (var i=0; i<doms3.length; i++){
+            data_list3.push(doms3[i].value)
+        }
+        full_data['purpose'] = data_list3;
+        for (var i=0; i<doms4.length; i++){
+            data_list4.push(doms4[i].value)
+        }
+        full_data['often'] = data_list4;
+        full_data['not_currently_use'] = data_list5;
+        alert("data_list");
+        alert("send data");
+        $.ajax({
+                    url: '/MMW/equipment/',
+                    type: 'post',
+                    data: JSON.stringify(full_data),
+                    success: function (response) {
+                        alert("retrieve data")
+                    }
+                }
+        )
+    }
+</script>
+<style>
+    .big-title {
+       color: #46287e;
+       font-weight: bold;
+       font-size: 3rem;
+    }
+    .row-m-b {
+        margin-bottom: 20px;
+    }
+    .textbox {
+        background-color: white;
+        margin-top: 19px;
+        height: 100px;
+    }
+    .inner-textarea {
+        width: 100%;
+        background-color: lightblue;
+        height: 70px;
+    }
+    .inner-span {
+       color: #46287e;
+       font-weight: 900;
+       font-size: 2rem;
+    }
+    .outer-ul {
+        padding-left: 0px;
+        margin-top: 19px;
+    }
+    .outer-textarea {
+        width: 100%;
+        text-align: left;
+        height: 88px;
+        background-color: lightblue;
+        margin-bottom: 50px;
+    }
+    #program-id {
+        margin-top: 40px;
+    }
+    .last-textbox {
+        padding: 10px;
+        background-color: white;
+    }
+    .last-textarea {
+        background-color: lightblue;
+        width: 100%;
+        height: 200px;
+    }
+    .last-des {
+        margin-top: 75px;
+    }
+    .outer-textarea-delete {
+        margin-bottom: 21px;
+    }
+    .sub-title p{
+        font-size: 1.8rem;
+    }
+</style>
+<div id="app">
+    <div id="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="big-title">9. My qeuipment, aid or modification support</h1>
+                <img src="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 sub-title">
+                <p>Think about the programs and therapy supports you currently use</p>
+                <p>Think about the programs and therapy that might help you</p>
+            </div>
+        </div>
+        <div class="row row-m-b">
+            <div class="col-md-3 col-lg-3">
+                <div class="container-header">
+                    <span class="inner-span">Program</span>
+                    <div class="textbox">
+                        <span>[Example: Speech therapy]</span>
+                        <textarea class="inner-textarea" id="therapy">{{textareas.program.0}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="container-header">
+                    <span class="inner-span">Who</span>
+                    <div class="textbox">
+                        <span>[Example: My speech therapist,Melissa]</span>
+                        <textarea class="inner-textarea" id="therapist">{{textareas.who.0}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="container-header">
+                    <span class="inner-span">Purpose</span>
+                    <div class="textbox">
+                        <span><small>[Example: To help me communicate better]</small></span>
+                        <textarea class="inner-textarea" id="communicate">{{textareas.purpose.0}}</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="container-header">
+                    <span class="inner-span">How often</span>
+                    <div class="textbox">
+                        <span>[Example: Once a week]</span>
+                        <textarea class="inner-textarea" id="week">{{textareas.often.0}}</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row  row-m-b">
+            <div class="col-md-3 col-lg-3">
+                <div class="textbox">
+                    <span>[Example: Social group]</span>
+                    <textarea class="inner-textarea" id="social-group">{{textareas.program.1}}</textarea>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="textbox">
+                    <span>[Example: Community group]</span>
+                    <textarea class="inner-textarea" id="community">{{textareas.who.1}}</textarea>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="textbox">
+                    <span>[Example: Friendships]</span>
+                    <textarea class="inner-textarea" id="friendship">{{textareas.purpose.1}}</textarea>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-3">
+                <div class="textbox">
+                    <span>[Example: Every second week]</span>
+                    <textarea class="inner-textarea" id="second-week">{{textareas.often.1}}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-ld-3">
+                <ul id="outer-ul" class="outer-ul" >
+                    {% for textarea in textareas.program_add %}
+                    <div class="outer-textbox">
+                        <textarea class="outer-textarea">{{textarea}}</textarea>
+                    </div>
+                    {% endfor %}
+                </ul>
+            </div>
+             <div class="col-md-3 col-ld-3">
+                <ul id="outer-ul2" class="outer-ul">
+
+                    {% for textarea in textareas.who_add %}
+                    <div class="outer-textbox">
+                        <textarea class="outer-textarea">{{textarea}}</textarea>
+                    </div>
+                    {% endfor %}
+                </ul>
+            </div>
+             <div class="col-md-3 col-ld-3">
+                <ul id="outer-ul3" class="outer-ul">
+                    {% for textarea in textareas.purpose_add %}
+                    <div class="outer-textbox">
+                        <textarea class="outer-textarea outer-textarea-delete">{{textarea}}</textarea>
+                        <button class="delete-button" onclick="delete_parent()">delete</button>
+                    </div>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-3 col-ld-3">
+                <ul id="outer-ul4" class="outer-ul">
+                    {% for textarea in textareas.often_add %}
+                    <div class="outer-textbox">
+                        <textarea class="outer-textarea">{{textarea}}</textarea>
+                    </div>
+                    {% endfor %}
+                </ul>
+                <button id="program-id" onclick="add_textarea()">add more content</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="last-des">Are there any programs and therapy you would like but not currently use?</p>
+                <div class="last-textbox">
+                    <textarea class="last-textarea" id="not-currently-use">{{ textareas.not_currently_use.0 }}</textarea>
+                </div>
+            </div>
+        </div>
+        <input type="button" value="submit" onclick="submit_data()">
+    </div>
+</div>
 {% endblock %}
+

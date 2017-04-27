@@ -2,21 +2,58 @@
 {% block app %}
 <script>
     delete_parent = function () {
-        event.target.parentElement.innerHTML = "";
+        var index = event.target.className.split('-').pop();
+        console.log(index);
+        var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
+        for (var i=0; i<=3; i++) {
+            console.log(i);
+            var select = "#" + node_ids[i] + " .outer-textbox-" + index;
+            console.log(select);
+            dom = $(select)[0];
+            console.log($(select));
+            console.log(dom);
+            dom.innerHTML = "";
+        }
     }
-    var add_textarea = function (node_id) {
-        textarea_dom = document.createElement('textarea');
-        textarea_dom.className = "outer-textarea";
-        delete_dom = document.createElement('button');
-        delete_dom.innerText = "delete";
-        delete_dom.className = "delete-button"
-        delete_dom.addEventListener('click', delete_parent)
-        div_dom = document.createElement('div')
-        div_dom.className = "outer-textbox";
-        div_dom.appendChild(textarea_dom);
-        div_dom.appendChild(delete_dom);
-        parent_dom = document.getElementById(node_id);
-        parent_dom.appendChild(div_dom)
+    delete_parent2 = function(dom) {
+        var index = event.target.className.split('-').pop();
+        console.log(index);
+        var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
+        for (var i=0; i<=3; i++) {
+            var select = "#" + node_ids[i] + " .outer-textbox-" + index;
+            console.log(select);
+            dom = $(select)[0];
+            dom.innerHTML = "";
+        }
+    }
+    var add_textarea = function () {
+        var unique_id = parseInt(Math.random() * 65999);
+        var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
+        console.log($("#outer-ul textarea"));
+        for (var i=0; i<=3; i++) {
+            var node_id = node_ids[i];
+            textarea_dom = document.createElement('textarea');
+            if (i==2) {
+                textarea_dom.className = "outer-textarea-delete outer-textarea";
+            } else {
+                textarea_dom.className = "outer-textarea";
+            }
+            if (i==2) {
+                delete_dom = document.createElement('button');
+                delete_dom.innerText = "delete";
+                delete_dom.className = "delete-button" + " " + "delete-button-" + unique_id;
+                delete_dom.addEventListener('click', delete_parent)
+            }
+            div_dom = document.createElement('div')
+            div_dom.className = "outer-textbox" + " " + "outer-textbox-" +  unique_id;
+
+            div_dom.appendChild(textarea_dom);
+            if (i==2) {
+                div_dom.appendChild(delete_dom);
+            }
+            parent_dom = document.getElementById(node_id);
+            parent_dom.appendChild(div_dom)
+        }
     };
     submit_data = function () {
         var doms1 = $('#outer-ul textarea');
@@ -94,6 +131,7 @@
         text-align: left;
         height: 88px;
         background-color: lightblue;
+        margin-bottom: 50px;
     }
     #program-id {
         margin-top: 40px;
@@ -110,6 +148,12 @@
     .last-des {
         margin-top: 75px;
     }
+    .outer-textarea-delete {
+        margin-bottom: 21px;
+    }
+    .sub-title p{
+        font-size: 1.8rem;
+    }
 </style>
 <div id="app">
     <div id="container">
@@ -121,7 +165,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 sub-title">
                 <p>Think about the programs and therapy supports you currently use</p>
                 <p>Think about the programs and therapy that might help you</p>
             </div>
@@ -194,47 +238,41 @@
             <div class="col-md-3 col-ld-3">
                 <ul id="outer-ul" class="outer-ul" >
                     {% for textarea in textareas.program_add %}
-                    <div class="outer-textbox">
+                    <div class="outer-textbox outer-textbox-{{forloop.counter}}">
                         <textarea class="outer-textarea">{{textarea}}</textarea>
-                        <button class="delete-button" onclick="delete_parent()">delete</button>
                     </div>
                     {% endfor %}
                 </ul>
-                <button id="program-id" onclick="add_textarea('outer-ul')">add more content</button>
             </div>
              <div class="col-md-3 col-ld-3">
                 <ul id="outer-ul2" class="outer-ul">
 
                     {% for textarea in textareas.who_add %}
-                    <div class="outer-textbox">
+                    <div class="outer-textbox outer-textbox-{{forloop.counter}}">
                         <textarea class="outer-textarea">{{textarea}}</textarea>
-                        <button class="delete-button" onclick="delete_parent()">delete</button>
                     </div>
                     {% endfor %}
                 </ul>
-                <button id="program-id" onclick="add_textarea('outer-ul2')">add more content</button>
             </div>
              <div class="col-md-3 col-ld-3">
                 <ul id="outer-ul3" class="outer-ul">
                     {% for textarea in textareas.purpose_add %}
-                    <div class="outer-textbox">
-                        <textarea class="outer-textarea">{{textarea}}</textarea>
-                        <button class="delete-button" onclick="delete_parent()">delete</button>
+                    <div class="outer-textbox outer-textbox-{{forloop.counter}}">
+                        <textarea class="outer-textarea outer-textarea-delete">{{textarea}}</textarea>
+                        <button class="delete-button delete-button-{{forloop.counter}}" onclick="delete_parent2(this)">delete</button>
                     </div>
                     {% endfor %}
                 </ul>
-                <button id="program-id" onclick="add_textarea('outer-ul3')">add more content</button>
             </div>
             <div class="col-md-3 col-ld-3">
                 <ul id="outer-ul4" class="outer-ul">
                     {% for textarea in textareas.often_add %}
-                    <div class="outer-textbox">
+                    <div class="outer-textbox outer-textbox-{{forloop.counter}}">
                         <textarea class="outer-textarea">{{textarea}}</textarea>
-                        <button class="delete-button" onclick="delete_parent()">delete</button>
                     </div>
                     {% endfor %}
                 </ul>
-                <button id="program-id" onclick="add_textarea('outer-ul4')">add more content</button>
+                <button id="program-id" onclick="add_textarea()">add more content</button>
             </div>
         </div>
         <div class="row">
