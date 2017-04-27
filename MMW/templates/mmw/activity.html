@@ -43,90 +43,546 @@
                 <img src="/staticw/image/clock.jpg">
             </div>
         </div>
-        <div id="down">
-            <table>
+        <ul id="invite_tabs" class="nav nav-tabs" role="tablist">
+          <li  class="nav-item">
+            <a href="#table-monday" data-toggle="tab" role="tab" class="nav-link" >Monday</a>
+          </li>
+          <li class="nav-item"><a href="#table-tuesday" data-toggle="tab" role="tab" class="nav-link" >Tuesday</a></li>
+          <li class="nav-item"><a href="#table-wednesday" data-toggle="tab" role="tab" class="nav-link" >Wednesday</a></li>
+          <li class="nav-item"><a href="#table-thursday" data-toggle="tab" role="tab" class="nav-link" >Tuesday</a></li>
+          <li class="nav-item"><a href="#table-friday" data-toggle="tab" role="tab" class="nav-link" >Friday</a></li>
+          <li class="nav-item"><a href="#table-saturday" data-toggle="tab" role="tab" class="nav-link" >Saturday</a></li>
+          <li class="nav-item"><a href="#table-sunday" data-toggle="tab" role="tab" class="nav-link" >Sunday</a></li>
+        </ul>
+        <div id="down" class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="table-monday">
+            <table name="monday">
                 <tr>
                     <th></th>
                     <th>What I do now:</th>
                     <th>What is working well:</th>
                     <th>What is not working well:</th>
                 </tr>
-                <tr>
+                <tr name="morning">
                     <td>
-                        <div>
-                           <p class="day">Wednesday</p>
-                           <ul>
-                               <li>Morning<>
-                               <li>Afternoon<>
-                               <li>Evening<>
-                           </ul>
-                        </div>
+                        <h4 class="day">Morning</h4>
                     </td>
-                    <td>
-                        <textarea rows="12"></textarea>
+                    <td name="now">
+                        <textarea rows="12">{{activity.monday.morning.now}}</textarea>
                     </td>
-                    <td>
-                        <textarea rows="12"></textarea>
+                    <td name="working">
+                        <textarea rows="12">{{activity.monday.morning.working}}</textarea>
                     </td>
-                    <td>
-                        <textarea rows="12"></textarea>
+                    <td name="notworking">
+                        <textarea rows="12">{{activity.monday.morning.notworking}}</textarea>
                     </td>
                 </tr>
-                <tr>
+                <tr name="afternoon">
                     <td>
-                        <div>
-                           <p class="day">Thursday</p>
-                           <ul>
-                               <li>Morning<>
-                               <li>Afternoon<>
-                               <li>Evening<>
-                           </ul>
-                        </div>
+                        <h4 class="day">Afternoon</h4>
                     </td>
+                    <td name="now">
+                        <textarea rows="12">{{activity.monday.afternoon.now}}</textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12">{{activity.monday.afternoon.working}}</textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12">{{activity.monday.morning.notworking}}</textarea>
+                    </td>
+                </tr>
+                <tr name="evening">
                     <td>
+                        <h4 class="day">Evening</h4>
+                    </td>
+                    <td name="now">
                         <textarea rows="12"></textarea>
                     </td>
-                    <td>
+                    <td name="working">
                         <textarea rows="12"></textarea>
                     </td>
-                    <td>
-                        <textarea rows="12"></textarea>
-                    </td>
-                </tr><tr>
-                    <td>
-                        <div>
-                           <p class="day">Friday</p>
-                           <ul>
-                               <li>Morning<>
-                               <li>Afternoon<>
-                               <li>Evening<>
-                           </ul>
-                        </div>
-                    </td>
-                    <td>
-                        <textarea rows="12"></textarea>
-                    </td>
-                    <td>
-                        <textarea rows="12"></textarea>
-                    </td>
-                    <td>
+                    <td name="notworking">
                         <textarea rows="12"></textarea>
                     </td>
                 </tr>
             </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="table-tuesday">
+              <table name="tuesday">
+                <tr>
+                    <th></th>
+                    <th>What I do now:</th>
+                    <th>What is working well:</th>
+                    <th>What is not working well:</th>
+                </tr>
+                <tr name="morning">
+                    <td>
+                        <h4 class="day">Morning</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="afternoon">
+                    <td>
+                        <h4 class="day">Afternoon</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="evening">
+                    <td>
+                        <h4 class="day">Evening</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+            </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="table-wednesday">
+              <table name="wednesday">
+                <tr>
+                    <th></th>
+                    <th>What I do now:</th>
+                    <th>What is working well:</th>
+                    <th>What is not working well:</th>
+                </tr>
+                <tr name="morning">
+                    <td>
+                        <h4 class="day">Morning</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="afternoon">
+                    <td>
+                        <h4 class="day">Afternoon</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="evening">
+                    <td>
+                        <h4 class="day">Evening</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+            </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="table-thursday">
+              <table name="thursday">
+                <tr>
+                    <th></th>
+                    <th>What I do now:</th>
+                    <th>What is working well:</th>
+                    <th>What is not working well:</th>
+                </tr>
+                <tr name="morning">
+                    <td>
+                        <h4 class="day">Morning</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="afternoon">
+                    <td>
+                        <h4 class="day">Afternoon</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="evening">
+                    <td>
+                        <h4 class="day">Evening</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+            </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="table-friday">
+              <table name="friday">
+                <tr>
+                    <th></th>
+                    <th>What I do now:</th>
+                    <th>What is working well:</th>
+                    <th>What is not working well:</th>
+                </tr>
+                <tr name="morning">
+                    <td>
+                        <h4 class="day">Morning</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="afternoon">
+                    <td>
+                        <h4 class="day">Afternoon</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="evening">
+                    <td>
+                        <h4 class="day">Evening</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+            </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="table-saturday">
+              <table name="saturday">
+                <tr>
+                    <th></th>
+                    <th>What I do now:</th>
+                    <th>What is working well:</th>
+                    <th>What is not working well:</th>
+                </tr>
+                <tr name="morning">
+                    <td>
+                        <h4 class="day">Morning</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="afternoon">
+                    <td>
+                        <h4 class="day">Afternoon</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="evening">
+                    <td>
+                        <h4 class="day">Evening</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+            </table>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="table-sunday">
+              <table name="sunday">
+                <tr>
+                    <th></th>
+                    <th>What I do now:</th>
+                    <th>What is working well:</th>
+                    <th>What is not working well:</th>
+                </tr>
+                <tr name="morning">
+                    <td>
+                        <h4 class="day">Morning</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="afternoon">
+                    <td>
+                        <h4 class="day">Afternoon</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+                <tr name="evening">
+                    <td>
+                        <h4 class="day">Evening</h4>
+                    </td>
+                    <td name="now">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="working">
+                        <textarea rows="12"></textarea>
+                    </td>
+                    <td name="notworking">
+                        <textarea rows="12"></textarea>
+                    </td>
+                </tr>
+            </table>
+          </div>
         </div>
     </div>
 
 <script>
+    var get_data = function() {
+        var data = {
+        'monday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'tuesday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'wednesday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'thursday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'friday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'saturday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'sunday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        }
+        var tables = $('table');
+        for (var i=0; i< tables.length; i++ ) {
+            console.log("正在获取第" + (i+1) + "张表格");
+            var table = tables[i];
+            var weekday = table.getAttribute('name') // 'monday'
+            var trs = $('tr', table);
+            for (var j=1; j<trs.length; j++) {
+                console.log("正在获取第" + (j+1) + "行");
+                var tr = trs[j];
+                var time = tr.getAttribute('name') // 'morning'
+                var tds = $('td', tr);
+                for (var k=1; k<tds.length; k++) {
+                    console.log("正在获取第" + (k+1) + "列");
+                    var td = tds[k];
+                    var type = td.getAttribute('name') // 'now'
+                    if (weekday=='saturday') {
+                        if (time=='afternoon') {
+                            if (type == 'notworking') {
+
+                            }
+                        }
+                    }
+                    data[weekday][time][type] = $('textarea', td)[0].value;
+                }
+            }
+        }
+        return data;
+    }
     var send_data = function() {
         console.log("准备发送数据")
+        var data = get_data();
         $.ajax({
-            url: "/MMW/index/",
+            url: "/MMW/activity/",
             type: "post",
-            data: {
-                key: 'value',
-                text1: 'text1',
-            },
+            data: JSON.stringify(data),
+            success: function(response) {
+                alert("发送成功");
+            }
         });
     }
 </script>

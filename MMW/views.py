@@ -256,6 +256,19 @@ class BucketListView(TemplateView):
 class ActivityView(TemplateView):
     template_name = "mmw/activity.html"
 
+    def get(self, request):
+        instance = models.Activity.objects.filter(user=request.user).first()
+        activity = json.loads(instance.data)
+        data = {'instance': instance, 'activity': activity}
+        return render(request, "mmw/activity.html", data)
+
+    def post(self, request):
+        data = json.loads(request.body.decode('utf8'))
+        activity_obj, created = models.Activity.objects.get_or_create(user=request.user)
+        activity_obj.data = json.dumps(data, indent=4)
+        activity_obj.save()
+        return HttpResponse("save successfully")
+
 
 class MyDailyActivityView(TemplateView):
     template_name = "mmw/mydailyactivity.html"

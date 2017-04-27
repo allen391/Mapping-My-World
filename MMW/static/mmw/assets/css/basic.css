@@ -10,12 +10,14 @@ body {
 #wrapper {
     width: 100%;
     /* background: #202020; */
+    background: #f3f3f3;
 }
 
 #page-wrapper {
     padding: 15px 15px;
     min-height: 600px;
     background: #F3F3F3;
+    border-left: 1px solid rgba(0,0,0,0.3);
 }
 
 #page-inner {
@@ -135,7 +137,7 @@ body {
     }
 
 .sidebar-collapse, .sidebar-collapse .nav {
-    background: none;
+    background-color: #f3f3f3;
 }
 
     .sidebar-collapse .nav {
@@ -145,6 +147,7 @@ body {
         .sidebar-collapse .nav > li > a {
             /* color: #fff;*/
             /*background: #202020;*/
+            /*background: red;*/
             text-shadow: none;
             padding: 15px 40px;
             border-bottom: 1px solid #2F2E31;
@@ -174,7 +177,7 @@ body {
 
 .navbar-side {
     border: none;
-    /*background-color: #202020;*/
+    background-color: #f3f3f3;
 }
 
 .navbar-cls-top {
@@ -189,6 +192,7 @@ body {
 
 .navbar-header {
     /*background: #000000;*/
+    /* background-color: red;*/
 }
 
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {

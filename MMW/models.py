@@ -1,6 +1,7 @@
 
 
 from django.db import models
+import json
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -133,8 +134,127 @@ class Equipment(models.Model):
     data = models.TextField("My programs and therapy supports: ")
 
 
-
-
-
-
-
+class Activity(models.Model):
+    DATA = {
+        'monday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'tuesday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'wednesday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'thursday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'friday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'saturday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+        'sunday': {
+            'morning': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'afternoon': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+            'evening': {
+                "now": "",
+                "working": "",
+                "notworking": "",
+            },
+         },
+    }
+    user = models.OneToOneField(User)
+    data = models.TextField("My Activity", default=json.dumps(DATA))
