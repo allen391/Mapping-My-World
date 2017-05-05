@@ -29,5 +29,7 @@ urlpatterns = [
     url(r'^equipment/$', views.EquipmentView.as_view(), name='equipment'),
     url(r'^short_term/$', views.ShortTermView.as_view(), name='short_term'),
     url(r'^long_term/$', views.LongTermView.as_view(), name='long_term'),
-    url(r'^bucket_list/$', views.BucketListView.as_view(), name='bucket_list')
+    url(r'^bucket_list/$', views.BucketListView.as_view(), name='bucket_list'),
+    url(r'^mydream/$', views.MyDreamView.as_view(), name="mydream"),
+    url(r'^wish/$', views.HowIWishView.as_view(), name="wish"),
 ]

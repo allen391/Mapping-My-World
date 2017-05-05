@@ -320,6 +320,7 @@ class ProgramView(LoginRequiredMixin, TemplateView):
 
 class EquipmentView(LoginRequiredMixin, TemplateView):
     template_name = "mmw/equipment.html"
+    login_url = '/'
 
     def get(self, request):
         instance = models.Equipment.objects.filter(user=request.user).first()
@@ -337,3 +338,13 @@ class EquipmentView(LoginRequiredMixin, TemplateView):
         equipment_obj.data = json.dumps(data, indent=4)
         equipment_obj.save()
         return HttpResponse("save successfully")
+
+
+class MyDreamView(LoginRequiredMixin, TemplateView):
+    template_name = "mmw/mydream.html"
+    login_url = '/'
+
+
+class HowIWishView(LoginRequiredMixin, TemplateView):
+    template_name = "mmw/wish.html"
+    login_url = '/'
