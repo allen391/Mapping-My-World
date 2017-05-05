@@ -348,3 +348,17 @@ class MyDreamView(LoginRequiredMixin, TemplateView):
 class HowIWishView(LoginRequiredMixin, TemplateView):
     template_name = "mmw/wish.html"
     login_url = '/'
+
+    def get(self, request):
+        context = {}
+        instance = models.Wish.objects.filter(user=request.user).first()
+        if instance:
+            context = {'data': json.loads(instance.data)}
+        return render(request, 'mmw/wish.html', context)
+
+    def post(self, request):
+        print("用户上传了他的数据")
+        instance, created = models.Wish.objects.get_or_create(user=request.user)
+        instance.data = request.body.decode('utf8')
+        instance.save()
+        return HttpResponse("发送成功")

@@ -1,47 +1,128 @@
 {% extends "base.html" %}
 {% block app %}
 <style>
-    #page-wrapper {
-        background-color: #F2F0EA;
-    }
-    .dream-container {
-        display: flex;
-    }
-    h1 {
-        color: #4a2582;
-        font-size: 35px;
-        font-weight: 200;
-    }
-    .left {
-        width: 39%
-    }
-    .right {
-        width: 52%
-    }
-    button {
-        margin-left: 45%;
-    }
+  h1 {
+    color: #4a2582;
+  }
+  #desc {
+    font-size: x-large;
+    color: #888;
+    font-weight: 600;
+  }
+  div {
+  }
+  table {
+    width: 100%;
+  }
+  tr {
+    margin: 5px;
+  }
+  td {
+    width: 25%;
+    margin: 5px;
+    padding: 4px;
+  }
+  .firsttd {
+    width: 18%;
+    color: #4a2582;
+    font-weight: bolder;
+    font-size: larger;
+  }
+  td input {
+    width: 96%;
+    height: 75px;
+  }
+  input {
+    border: none;
+    background: white;
+  }
+  .btn {
+    float: right;
+  }
 </style>
+<script>
+  get_data = function() {
+    list = []
+    trs = $('table tr')
+    for (var i=1;i<8; i++ ) {
+      var tds = []
+      for (var j=0;j<3;j++ ) {
+        tds.push( $('input', $('table tr')[i])[j].value)
+      }
+      list.push(tds)
+    }
+    console.log(list);
+    return list;
+  }
+  save_data = function() {
+    var list = get_data();
+    $.ajax({
+      url: "/MMW/wish/",
+      type: "POST",
+      data: JSON.stringify(list),
+      success: function(response) {
+        alert("发送成功");
+      }
+    });
+  }
+</script>
 <div id="app">
-    <h1><strong>My Dreams and Goals</strong></h1>
-    <div class="dream-container">
-        <p class="left">
-            You’ve explored how your life currently looks. Now let’s
-            have a look at your dreams and goals – for both the
-            immediate and longer term future. Goal setting can help
-            us get where we would like to, step by step.
-            In this section you’ll think about what your ideal week
-            would look like, and what you’d like your home life, your
-            work, your education, and your independence to be like.
-            You don’t have to make goals for everything. There may
-            be some things that are working well for you right now
-            that you are happy to keep as they are, and other things
-            you’d like to change.
-        </p>
-        <img src="/static/mmw/image/mydream_bg.JPG" class="right">
-    </div>
-    <div style="width: 100%">
-        <button class="btn-primary btn btn-lg"><a href="/MMW/wish/">start</a></button>
-    </div>
+  <h1><strong>10. How I wish my week looked</strong></h1>
+  <p id="desc">Thinking about what you wrote was working well and what could work better in the
+previous questions, what would your ideal week look like? Don’t forget to include
+work, education, hobbies and relationships, if they are relevant to you. </p>
+  <form>
+    <table>
+      <tr>
+        <th class="firsttd"></th>
+        <th>Morning</th>
+        <th>Afternoon</th>
+        <th>Evening</th>
+      </tr>
+      <tr>
+        <td class="firsttd">Monday</td>
+        <td><input value="{{data.0.0}}"></td>
+        <td><input value="{{data.0.1}}"></input></td>
+        <td><input value="{{data.0.2}}"></input></td>
+      </tr>
+      <tr>
+        <td class="firsttd">Tuesday</td>
+        <td><input value="{{data.1.0}}"></input></td>
+        <td><input value="{{data.1.1}}"></input></td>
+        <td><input value="{{data.1.2}}"></input></td>
+      </tr>
+      <tr>
+        <td class="firsttd">Wednesday</td>
+        <td><input value="{{data.2.0}}"></input></td>
+        <td><input value="{{data.2.1}}"></input></td>
+        <td><input value="{{data.2.2}}"></input></td>
+      </tr>
+      <tr>
+        <td class="firsttd">Thursday</td>
+        <td><input value="{{data.3.0}}"></input></td>
+        <td><input value="{{data.3.1}}"></input></td>
+        <td><input value="{{data.3.2}}"></input></td>
+      </tr>
+      <tr>
+        <td class="firsttd">Friday</td>
+        <td><input value="{{data.4.0}}"></input></td>
+        <td><input value="{{data.4.1}}"></input></td>
+        <td><input value="{{data.4.2}}"></input></td>
+      </tr>
+      <tr>
+        <td class="firsttd">Saturday</td>
+        <td><input value="{{data.5.0}}"></input></td>
+        <td><input value="{{data.5.1}}"></input></td>
+        <td><input value="{{data.5.2}}"></input></td>
+      </tr>
+      <tr>
+        <td class="firsttd">Sunday</td>
+        <td><input value="{{data.6.0}}"></input></td>
+        <td><input value="{{data.6.1}}"></input></td>
+        <td><input value="{{data.6.2}}"></input></td>
+      </tr>
+    </table>
+    <input type="button" class="btn btn-lg btn-primary" value="save" onclick="save_data()">
+  <form>
 </div>
 {% endblock %}

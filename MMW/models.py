@@ -134,6 +134,12 @@ class Equipment(models.Model):
     data = models.TextField("My programs and therapy supports: ")
 
 
+class Wish(models.Model):
+    user = models.OneToOneField(User)
+    data = models.TextField("My wish:")
+
+
+
 class Activity(models.Model):
     DATA = {
         'monday': {
