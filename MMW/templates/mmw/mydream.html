@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block app %}
+<style>
+    #page-wrapper {
+        background-color: #F2F0EA;
+    }
+    .dream-container {
+        display: flex;
+    }
+    h1 {
+        color: #4a2582;
+        font-size: 35px;
+        font-weight: 200;
+    }
+    .left {
+        width: 39%
+    }
+    .right {
+        width: 52%
+    }
+    button {
+        margin-left: 45%;
+    }
+</style>
+<div id="app">
+    <h1><strong>My Dreams and Goals</strong></h1>
+    <div class="dream-container">
+        <p class="left">
+            You’ve explored how your life currently looks. Now let’s
+            have a look at your dreams and goals – for both the
+            immediate and longer term future. Goal setting can help
+            us get where we would like to, step by step.
+            In this section you’ll think about what your ideal week
+            would look like, and what you’d like your home life, your
+            work, your education, and your independence to be like.
+            You don’t have to make goals for everything. There may
+            be some things that are working well for you right now
+            that you are happy to keep as they are, and other things
+            you’d like to change.
+        </p>
+        <img src="/static/mmw/image/mydream_bg.JPG" class="right">
+    </div>
+    <div style="width: 100%">
+        <button class="btn-primary btn btn-lg"><a href="/MMW/wish/">start</a></button>
+    </div>
+</div>
+{% endblock %}
