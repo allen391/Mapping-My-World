@@ -196,8 +196,22 @@ class communication(LoginRequiredMixin, TemplateView):
             return HttpResponseRedirect('/MMW/importance/')
 
 
-class DailyactivityView(TemplateView):
+class DailyactivityView(LoginRequiredMixin, TemplateView):
     template_name = "mmw/dailyactivity.html"
+    login_url = '/'
+
+    def get(self, request):
+        instance, created = models.Activity.objects.get_or_create(user=request.user)
+        context = {}
+        context = json.loads(instance.data)
+        return render(request, 'mmw/dailyactivity.html', context)
+
+    def post(self, request):
+        data = json.loads(request.body.decode('utf8'))
+        instance, created = models.Activity.objects.get_or_create(user=request.user)
+        instance.data = json.dumps(data, indent=4)
+        instance.save()
+        return HttpResponse("save successfully")
 
 
 class FellingView(TemplateView):

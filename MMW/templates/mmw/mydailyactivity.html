@@ -8,6 +8,20 @@
 </head>
 <body onload="init()">
     <div id="app">
+        <ul id="invite_tabs" class="nav nav-tabs" role="tablist">
+          <li  class="nav-item">
+            <a href="#profile_form_div" data-toggle="tab" role="tab" class="nav-link" >邀请</a>
+          </li>
+          <li class="nav-item"><a href="#import_data_div" data-toggle="tab" role="tab" class="nav-link" >导入</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="profile_form_div">
+            第一页
+          </div>
+          <div role="tabpanel" class="tab-pane" id="import_data_div">
+            第二页
+          </div>
+        </div>
         <h1>5. My Daily activities</h1>
         <p class="desc">How do you spend your average week currently? </p>
         <table>
