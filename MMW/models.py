@@ -139,6 +139,16 @@ class Wish(models.Model):
     data = models.TextField("My wish:")
 
 
+class Short_term(models.Model):
+    user = models.OneToOneField(User)
+    text = models.TextField("What would you like to achieve in the next 12months? ")
+
+
+class Long_term(models.Model):
+    user = models.OneToOneField(User)
+    text = models.TextField("What would you like to achieve in the next five years? ")
+
+
 
 class Activity(models.Model):
     DATA = {

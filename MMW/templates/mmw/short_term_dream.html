@@ -1,52 +1,48 @@
 {% extends 'base.html' %}
 {% block app %}
 <style>
-    .text-box {
-        margin-top: 2px;
-        padding: 10px;
+    h1 {
+        color: #4a2582;
+        margin-top: 100px;
+    }
+    .des {
+        font-size: x-large;
+        color: #888;
+        font-weight: 600;
+        margin-top: 137px;
+    }
+    .textbox {
+        width: 60%;
+        padding: 0.5%;
         background-color: white;
     }
-    .text {
+    textarea {
         width: 100%;
-        height: 600px;
+        height: 300px;
         background-color: lightblue;
     }
-    .container {
-        margin: 0px;
-    }
-    #question {
-        margin-top: 10%;
-    }
-    .dec {
+     .submit {
+        background-color: #0f71b8;
+        color: white;
+        width: 100px;
+        height: 50px;
+        border: 0px;
+        border-radius: 10px;
+        float: right;
+        margin-right: 14%;
         margin-top: 5%;
     }
-    p {
-        font-size: 18px;
-        margin-left: 5%;
-    }
-    h1 {
-        margin-left: 5%;
-    }
 </style>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>My short term dreams and goals: next 12 months</h1>
+<div id="app">
+    <h1>My short term dreams and goals: next 12 months</h1>
+    <p class="des">Think about: daily living, home, relationships. health&wellbeing, lifelong learning, work, social＆community and choice & control</p>
+    <p class="des sub-title"><small>which goals are the most important to you in the next 12 months?</small></p>
+    <form method="post" action="/MMW/short_term/">
+        <div class="textbox">
+            <textarea name="text" id="text">{{ instance.text }}</textarea>
         </div>
-        <div class="col-md-12">
-            <div class="dec">
-            <p>Think about: daily living, home, relationships, health & wellbeing, lifelong learning</p>
-            <p>work, social & community and choice & control</p>
-            </div>
-        </div>
-        <form method="post" action="/MMW/short_term/">
-        <div class="col-md-12" style="margin-top: 0px">
-            <p id="question">What would you like to achieve in the next 12 months?</p>
-            <div class="text-box">
-                <textarea class="text" name="text" id="text"></textarea>
-            </div>
-        </div>
-        </form>
-    </div>
+    </form>
+     <input class="submit" type="submit" value="next >">
 </div>
+
 {% endblock %}

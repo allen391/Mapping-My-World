@@ -255,12 +255,47 @@ class MyHomeView(LoginRequiredMixin, TemplateView):
             return HttpResponseRedirect('/MMW/dailyactivity/')
 
 
-class ShortTermView(TemplateView):
+class ShortTermView(LoginRequiredMixin, TemplateView):
     template_name = 'mmw/short_term_dream.html'
+    login_url = "/"
+
+    def get(self, request):
+        instance, created = models.Activity.objects.get_or_create(user=request.user)
+        return render(request, "mmw/short_term_dream.html", {"instance": instance})
+
+
+    def post(self, request):
+        text = request.POST['text']
+        instance = models.Short_term.objects.filter(user=request.user).first()
+        if instance is not None:
+            instance.text = text
+            instance.save()
+            return HttpResponseRedirect('/MMW/long_term/')
+        else:
+            short_term = models.Short_term.objects.create(user=request.user, text=text)
+            short_term.save()
+            return HttpResponseRedirect('/MMW/long_term/')
 
 
 class LongTermView(TemplateView):
     template_name = 'mmw/long_term_dream.html'
+    login_url = "/"
+
+    def get(self, request):
+        instance, created = models.Long_term.objects.get_or_create(user=request.user)
+        return render(request, "mmw/long_term_dream.html.html", {"instance": instance})
+
+    def post(self, request):
+        text = request.POST['text']
+        instance = models.Long_term.objects.filter(user=request.user).first()
+        if instance is not None:
+            instance.text = text
+            instance.save()
+            return HttpResponseRedirect('/MMW/bucket_list/')
+        else:
+            long_term = models.Long_term.objects.create(user=request.user, text=text)
+            long_term.save()
+            return HttpResponseRedirect('/MMW/bucket_list/')
 
 
 class BucketListView(TemplateView):
@@ -329,7 +364,6 @@ class ProgramView(LoginRequiredMixin, TemplateView):
         prgoram_obj.data = json.dumps(data, indent=4)
         prgoram_obj.save()
         return HttpResponse("save successfully")
-
 
 
 class EquipmentView(LoginRequiredMixin, TemplateView):
