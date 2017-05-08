@@ -149,6 +149,20 @@ class Long_term(models.Model):
     text = models.TextField("What would you like to achieve in the next five years? ")
 
 
+class Bulk_list(models.Model):
+    user = models.OneToOneField(User)
+    text = models.TextField("If you had one ultimate wish, what would it be？")
+
+
+class WeeklySupport(models.Model):
+    user = models.OneToOneField(User)
+    text = models.TextField("If you had one ultimate wish, what would it be？", default=json.dumps([]))
+
+
+class Health(models.Model):
+    user = models.OneToOneField(User)
+    text = models.TextField("My health and wellbeing", default=json.dumps([]))
+
 
 class Activity(models.Model):
     DATA = {

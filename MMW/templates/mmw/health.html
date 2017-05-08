@@ -1,6 +1,27 @@
 {% extends 'base.html' %}
 {% block app %}
 <script src="/static/mmw/initheight.js"></script>
+<script>
+        save_data = function() {
+            data = []
+            doms = $('textarea')
+            for (var i=0; i<doms.length; i++ ) {
+                data.push(doms[i].value)
+            }
+            $.ajax({
+                url: '/MMW/health/',
+                type: 'POST',
+                data: JSON.stringify(data),
+                success: function(response) {
+{#                    alert("data sent");#}
+                },
+            });
+        }
+        save_data_next = function() {
+            save_data();
+            window.location="/MMW/program/";
+        }
+</script>
 <style>
     #app{
         background-color: #e1e1cb;
@@ -65,7 +86,7 @@
                 <p class="box-intro">My current health concerns or challenges</p>
                 <div class="text-box">
                     <p style="font-size: 10px">[Example: I've got high blood pressure and diabetes]</p>
-                    <textarea class="inner-textarea"></textarea>
+                    <textarea class="inner-textarea">{{data.0}}</textarea>
                 </div>
             </div>
         </div>
@@ -74,7 +95,7 @@
                 <p class="box-intro">Important things to me about my health are:</p>
                 <div class="text-box">
                     <p style="font-size: 10px">[Example: Keeping fit and healthy]</p>
-                    <textarea class="inner-textarea"></textarea>
+                    <textarea class="inner-textarea">{{data.1}}</textarea>
                 </div>
             </div>
         </div>
@@ -83,7 +104,7 @@
                 <p class="box-intro">What is going well with my health</p>
                 <div class="text-box">
                     <p style="font-size: 10px">[Example: I eat a balanced diet]</p>
-                    <textarea class="inner-textarea"></textarea>
+                    <textarea class="inner-textarea">{{data.2}}</textarea>
                 </div>
             </div>
         </div>
@@ -92,13 +113,13 @@
                 <p class="box-intro">What is not working well with my health</p>
                 <div class="text-box">
                     <p style="font-size: 10px">[Example: I'd like to reduce my weight by joining an exercise class. I need to find a suitable class and someone to take me]</p>
-                    <textarea class="inner-textarea"></textarea>
+                    <textarea class="inner-textarea">{{data.3}}</textarea>
                 </div>
             </div>
         </div>
         <div class="bottom-button">
-            <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" >
-            <input class="submit" type="submit" value="next >">
+            <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" >
+            <input class="submit" type="submit" value="next >" onclick="save_data_next()">
         </div>
     </div>
 </div>

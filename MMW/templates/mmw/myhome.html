@@ -9,7 +9,7 @@
             <img src="/static/mmw/image/flag.JPG">
         </div>
     </div>
-    <form method="post" action="/MMW/myhome">
+    <form method="post" action="/MMW/myhome/">
     {% csrf_token %}
     <div class="down">
         <div class="left col-md-6">
@@ -42,9 +42,10 @@
         </div>
     </div>
     <div class="bottom-button">
-        <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" >
-        <input class="submit" type="submit" value="next >">
-        </div>
+        <a class="btn btn-lg btn-primary" href="/MMW/myhome/">go back</a>
+        <input class="submit" type="submit" value="next >"  style="float: right" >
+        <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" style="float: right" >
+    </div>
     </form>
 </div>
 <script>

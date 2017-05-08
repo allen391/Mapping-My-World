@@ -39,10 +39,10 @@
     <p class="des sub-title"><small>what would you like to achieve in the next five years?</small></p>
     <form method="post" action="/MMW/long_term/">
         <div class="textbox">
-            <textarea></textarea>
+            <textarea name="text" >{{ instance.text }}</textarea>
         </div>
+        <input class="submit" type="submit" value="next >">
     </form>
-     <input class="submit" type="submit" value="next >">
 </div>
 
 {% endblock %}

@@ -12,7 +12,7 @@
         background-color: #F2F0EA;
         background-size: 100% 100%;
     }
-    input#my-family {
+    input#area1 {
         position: absolute;
         left: 35%;
         top: 9%;
@@ -21,7 +21,7 @@
         border: 0px;
         background: rgba(0,0,0,0);
     }
-    input#work-school {
+    input#area2 {
         position: absolute;
         left: 4%;
         top: 26%;
@@ -30,7 +30,7 @@
         border: 0px;
         background: rgba(0,0,0,0);
     }
-    input#friends{
+    input#area7{
         position: absolute;
         left: 30%;
         top: 77%;
@@ -39,7 +39,7 @@
         border: 0px;
         background: rgba(0,0,0,0);
     }
-    input#very-close-top{
+    input#area3{
         position: absolute;
         left: 40%;
         top: 26%;
@@ -48,7 +48,7 @@
         border: 0px;
         background: rgba(0,0,0,0);
     }
-    input#very-close-bottom{
+    input#area4{
         position: absolute;
         left: 40%;
         top: 58%;
@@ -57,7 +57,7 @@
         border: 0px;
         background: rgba(0,0,0,0);
     }
-    input#very-close-left {
+    input#area5 {
         position: absolute;
         left: 25%;
         top: 36%;
@@ -66,7 +66,7 @@
         border: 0px;
         background: rgba(0,0,0,0);
     }
-     input#very-close-right {
+     input#area6 {
         position: absolute;
         left: 62%;
         top: 36%;
@@ -75,7 +75,7 @@
         border: 0px;
         background: rgba(0,0,0,0);
     }
-    input#home-supporters {
+    input#area8 {
         position: absolute;
         left: 79%;
         top: 28%;
@@ -93,6 +93,7 @@
             border-radius: 10px;
         }
         .bottom-button {
+            float: right
             display: flex;
             justify-content: flex-end;
             margin-top: 100px;
@@ -108,7 +109,7 @@
 </style>
 <div id="app">
     <img id="bg-img" src="/static/mmw/image/importance_bg.jpg">
-    <form>
+    <form method="post" action="/MMW/importance/">
         <input id="area1" name="my-family" type="text">
         <input id="area2" name="work-school" type="text">
         <input id="area3" name="very-close-top" type="text">
@@ -118,8 +119,9 @@
         <input id="area7" name="friends" type="text">
         <input id="area8" name="home-supporters" type="text">
         <div class="bottom-button">
-            <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" >
-            <input class="submit" type="submit" value="next >">
+            <button class="btn btn-lg btn-primary"><a>go back</a></button>
+            <input class="submit" type="submit" value="next >"  style="float: right" >
+            <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" style="float: right" >
         </div>
     </form>
 </div>

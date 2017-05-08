@@ -152,7 +152,7 @@ class ImportanceView(LoginRequiredMixin, TemplateView):
             instance.friends = text7
             instance.home_supporters = text8
             instance.save()
-            return render(request, "mmw/importance.html", {})
+            return render(request, "mmw/myhome.html", {})
         else:
             whoiam = models.WhoIAm.objects.create(user=request.user, text1=text1, text2=text2, text3=text3, text4=text4, text5=text5, text6=text6, text7=text7, text8=text8)
             whoiam.save()
@@ -260,7 +260,7 @@ class ShortTermView(LoginRequiredMixin, TemplateView):
     login_url = "/"
 
     def get(self, request):
-        instance, created = models.Activity.objects.get_or_create(user=request.user)
+        instance, created = models.Short_term.objects.get_or_create(user=request.user)
         return render(request, "mmw/short_term_dream.html", {"instance": instance})
 
 
@@ -277,13 +277,13 @@ class ShortTermView(LoginRequiredMixin, TemplateView):
             return HttpResponseRedirect('/MMW/long_term/')
 
 
-class LongTermView(TemplateView):
+class LongTermView(LoginRequiredMixin, TemplateView):
     template_name = 'mmw/long_term_dream.html'
     login_url = "/"
 
     def get(self, request):
         instance, created = models.Long_term.objects.get_or_create(user=request.user)
-        return render(request, "mmw/long_term_dream.html.html", {"instance": instance})
+        return render(request, "mmw/long_term_dream.html", {"instance": instance})
 
     def post(self, request):
         text = request.POST['text']
@@ -298,8 +298,25 @@ class LongTermView(TemplateView):
             return HttpResponseRedirect('/MMW/bucket_list/')
 
 
-class BucketListView(TemplateView):
+class BucketListView(LoginRequiredMixin, TemplateView):
     template_name = 'mmw/bucket_list.html'
+    login_url = "/"
+
+    def get(self, request):
+        instance, created = models.Bulk_list.objects.get_or_create(user=request.user)
+        return render(request, "mmw/bucket_list.html", {"instance": instance})
+
+    def post(self, request):
+        text = request.POST['text']
+        instance = models.Bulk_list.objects.filter(user=request.user).first()
+        if instance is not None:
+            instance.text = text
+            instance.save()
+            return HttpResponseRedirect('/MMW/bucket_list/')
+        else:
+            long_term = models.Bulk_list.objects.create(user=request.user, text=text)
+            long_term.save()
+            return HttpResponseRedirect('/MMW/bucket_list/')
 
 
 class ActivityView(TemplateView):
@@ -327,8 +344,27 @@ class SupportsView(TemplateView):
     template_name = "mmw/supports.html"
 
 
-class WeeklySupportView(TemplateView):
+class WeeklySupportView(LoginRequiredMixin, TemplateView):
     template_name = "mmw/weeklysupport.html"
+    login_url = '/'
+
+    def get(self, request):
+        print('weeklysupport')
+        instance = models.WeeklySupport.objects.filter(user=request.user).first()
+        data = []
+        if instance is not None:
+            data = json.loads(instance.text)
+        print(data)
+        return render(request, self.template_name, {'data': data})
+
+    def post(self, request):
+        print("weeklysupport")
+        data = json.loads(request.body.decode('utf8'))
+        instance, created = models.WeeklySupport.objects.get_or_create(user=request.user)
+        print(data)
+        instance.text = json.dumps(data, indent=4)
+        instance.save()
+        return HttpResponse("save successfully")
 
 
 class BaseView(TemplateView):
@@ -339,8 +375,24 @@ class ExtendView(TemplateView):
     template_name = "mmw/activity.html"
 
 
-class HealthView(TemplateView):
+class HealthView(LoginRequiredMixin, TemplateView):
     template_name = "mmw/health.html"
+    login_url = '/'
+
+    def get(self, request):
+        instance = models.Health.objects.filter(user=request.user).first()
+        data = []
+        if instance is not None:
+            data = json.loads(instance.text)
+        print(data)
+        return render(request, self.template_name, {'data': data})
+
+    def post(self, request):
+        data = json.loads(request.body.decode('utf8'))
+        instance, created = models.Health.objects.get_or_create(user=request.user)
+        instance.text = json.dumps(data, indent=4)
+        instance.save()
+        return HttpResponse("save successfully")
 
 
 class ProgramView(LoginRequiredMixin, TemplateView):

@@ -33,10 +33,14 @@
             type: 'post',
             data: JSON.stringify(data),
             success: function(response) {
-                alert('请求成功');
+{#                alert('请求成功');#}
             }
         });
         console.log(data);
+    }
+    save_data_and_next = function() {
+        save_data();
+        window.location = "/MMW/weeklysupport";
     }
 </script>
 <div id="app">
@@ -111,6 +115,10 @@
         </table>
       </div>
     </div>
-    <button class="btn btn-lg btn-primary" onclick="save_data()">save</button>
+    <a style="margin-top: 88px" class="btn btn-lg btn-primary" href="/MMW/myhome/">go back</a>
+    <div style="float: right; margin-top: 88px">
+        <button class="btn btn-lg btn-primary" onclick="save_data()">save</button>
+        <button class="btn btn-lg btn-primary" style="margin-left: 20px;" onclick="save_data_and_next()">next</button>
+    </div>
 </div>
 {% endblock %}

@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% block app %}
 <style>
+    .des {
+        font-size: x-large;
+        color: #888;
+        font-weight: 600;
+        margin-top: 137px;
+    }
     .text-box {
         margin-top: 2px;
         padding: 10px;
@@ -19,10 +25,23 @@
     }
     p {
         font-size: 18px;
-        margin-left: 5%;
+        /* margin-left: 5%;*/
     }
     h1 {
-        margin-left: 5%;
+        /* margin-left: 5%;*/
+        color: #4a2582;
+        margin-top: 100px;
+    }
+     .submit {
+        background-color: #0f71b8;
+        color: white;
+        width: 100px;
+        height: 50px;
+        border: 0px;
+        border-radius: 10px;
+        float: right;
+        margin-right: 14%;
+        margin-top: 5%;
     }
 </style>
 <div class="container">
@@ -32,16 +51,17 @@
         </div>
         <div class="col-md-12">
             <div class="dec">
-            <p>If you had one ultimate wish, what would it be？</p>
-            <p><small>Example: An overseas trip? To participate in a marathon? Go on a hot air balloon? To get married</p>
+            <p class="des">If you had one ultimate wish, what would it be？</p>
+            <p  class="des"><small>Example: An overseas trip? To participate in a marathon? Go on a hot air balloon? To get married</p>
             </div>
         </div>
-        <form method="post" action="/MMW/short_term/">
-        <div class="col-md-12" style="margin-top: 0px">
-            <div class="text-box">
-                <textarea class="text" name="text" id="text"></textarea>
+        <form method="post" action="/MMW/bucket_list/">
+            <div class="col-md-12" style="margin-top: 0px">
+                <div class="text-box">
+                    <textarea class="text" name="text" id="text">{{ instance.text }}</textarea>
+                </div>
             </div>
-        </div>
+            <input class="submit" type="submit" value="save >">
         </form>
     </div>
 </div>

@@ -1,13 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="/static/mmw/initheight.js"></script>
+{% extends 'base.html' %}
+{% block app %}
+    <script>
+        save_data = function() {
+            data = []
+            doms = $('textarea')
+            for (var i=0; i<doms.length; i++ ) {
+                data.push(doms[i].value)
+            }
+            $.ajax({
+                url: '/MMW/weeklysupport/',
+                type: 'POST',
+                data: JSON.stringify(data),
+                success: function(response) {
+{#                    alert("data sent");#}
+{#                    window.location="/MMW/health";#}
+                },
+            });
+        }
+        save_data_and_next = function() {
+        save_data();
+        window.location = "/MMW/health";
+    }
+    </script>
     <link rel="stylesheet" href="/static/mmw/weeklysupport.css">
-</head>
-<body onload="init()">
     <div id="app">
+        <form method="post" action="/MMW/weeklysupport/">
         <div id="header">
             <h1>My weekly supports</h1>
             <img src="/static/mmw/image/calendar.jpg">
@@ -29,7 +46,7 @@
                     </div>
                 </td>
                 <td>
-                    <textarea></textarea>
+                    <textarea>{{data.0}}</textarea>
                 </td>
             </tr>
             <tr>
@@ -39,7 +56,17 @@
                     </div>
                 </td>
                 <td>
-                    <textarea></textarea>
+                    <textarea>{{data.1}}</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-bottom: 16px">
+                    <div id="column-1-left">
+                        <p class="table-left-des">Other:</p>
+                    </div>
+                </td>
+                <td>
+                    <textarea>{{data.2}}</textarea>
                 </td>
             </tr>
             <tr>
@@ -59,7 +86,7 @@
                     </div>
                 </td>
                 <td>
-                    <textarea></textarea>
+                    <textarea>{{data.4}}</textarea>
                 </td>
             </tr>
             <tr>
@@ -69,21 +96,17 @@
                     </div>
                 </td>
                 <td>
-                    <textarea></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-bottom: 16px">
-                    <div id="column-1-left">
-                        <p class="table-left-des">Other:</p>
-                    </div>
-                </td>
-                <td>
-                    <textarea></textarea>
+                    <textarea>{{data.5}}</textarea>
                 </td>
             </tr>
         </table>
         <img style="width: 90%; height: 185px; margin-top: 80px" src="/static/mmw/image/multi-pic.PNG">
+        <a style="margin-top: 88px" class="btn btn-lg btn-primary" href="/MMW/dailyactivity/">go back</a>
+            <div style="float: right; margin-top: 88px">
+                <button class="btn btn-lg btn-primary" onclick="save_data()">save</button>
+                <button class="btn btn-lg btn-primary" style="margin-left: 20px;" onclick="save_data_and_next()">next</button>
+            </div>
+        </form>
     </div>
-</body>
-</html>
+
+{% endblock %}

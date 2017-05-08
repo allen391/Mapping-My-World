@@ -39,6 +39,7 @@
   .btn {
     float: right;
   }
+
 </style>
 <script>
   get_data = function() {
@@ -61,9 +62,14 @@
       type: "POST",
       data: JSON.stringify(list),
       success: function(response) {
-        alert("发送成功");
+{#        alert("发送成功");#}
+{#        window.location = "/MMW/short_term/"#}
       }
     });
+  }
+  save_data_next = function () {
+      save_data();
+      window.location = "/MMW/short_term/"
   }
 </script>
 <div id="app">
@@ -122,7 +128,10 @@ work, education, hobbies and relationships, if they are relevant to you. </p>
         <td><input value="{{data.6.2}}"></input></td>
       </tr>
     </table>
-    <input type="button" class="btn btn-lg btn-primary" value="save" onclick="save_data()">
+    <div style="float: right; margin-top: 88px">
+        <button class="btn btn-lg btn-primary" onclick="save_data()">save</button>
+        <button class="btn btn-lg btn-primary" style="margin-left: 20px;" onclick="save_data_and_next()">next</button>
+    </div>
   <form>
 </div>
 {% endblock %}
