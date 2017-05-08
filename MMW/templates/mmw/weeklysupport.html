@@ -12,15 +12,11 @@
                 type: 'POST',
                 data: JSON.stringify(data),
                 success: function(response) {
-{#                    alert("data sent");#}
-{#                    window.location="/MMW/health";#}
+                    alert("data sent");
+                    window.location="/MMW/health";
                 },
             });
         }
-        save_data_and_next = function() {
-        save_data();
-        window.location = "/MMW/health";
-    }
     </script>
     <link rel="stylesheet" href="/static/mmw/weeklysupport.css">
     <div id="app">
@@ -101,11 +97,10 @@
             </tr>
         </table>
         <img style="width: 90%; height: 185px; margin-top: 80px" src="/static/mmw/image/multi-pic.PNG">
-        <a style="margin-top: 88px" class="btn btn-lg btn-primary" href="/MMW/dailyactivity/">go back</a>
-            <div style="float: right; margin-top: 88px">
-                <button class="btn btn-lg btn-primary" onclick="save_data()">save</button>
-                <button class="btn btn-lg btn-primary" style="margin-left: 20px;" onclick="save_data_and_next()">next</button>
-            </div>
+        <a class="btn btn-lg btn-primary" href="/MMW/dailyactivity/">go back</a>
+        <div style="float: right">
+            <input class="btn btn-lg btn-primary" style="margin-left: 20px;" type="button" onclick="save_data()" value="save">
+        </div>
         </form>
     </div>
 

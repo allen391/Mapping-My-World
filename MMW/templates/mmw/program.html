@@ -55,7 +55,7 @@
             parent_dom.appendChild(div_dom)
         }
     };
-    save_data = function () {
+    submit_data = function () {
         var doms1 = $('#outer-ul textarea');
         var doms2 = $('#outer-ul2 textarea');
         var doms3 = $('#outer-ul3 textarea');
@@ -94,22 +94,18 @@
         }
         full_data['often'] = data_list4;
         full_data['not_currently_use'] = data_list5;
-{#        alert("data_list");#}
-{#        alert("send data");#}
+        alert("data_list");
+        alert("send data");
         $.ajax({
                     url: '/MMW/program/',
                     type: 'post',
                     data: JSON.stringify(full_data),
                     success: function (response) {
-{#                        alert("retrieve data")#}
-{#                        window.location = "/MMW/equipment/";#}
+                        alert("retrieve data")
+                        window.location = "/MMW/equipment/";
                     }
                 }
         )
-    }
-    save_data_next = function () {
-        save_data();
-        window.location = "/MMW/equipment/"
     }
 </script>
 <style>
@@ -158,26 +154,6 @@
     }
     .sub-title p{
         font-size: 1.8rem;
-    }
-    .submit {
-        background-color: #0f71b8;
-        color: white;
-        width: 100px;
-        height: 50px;
-        border: 0px;
-        border-radius: 10px;
-    }
-    .bottom-button {
-        display: flex;
-        justify-content: flex-end;
-        margin-top: 50px;
-        margin-right: 30px;
-    }
-    #save-image {
-        margin-right: 36px;
-        border-radius: 10px;
-        width: 100px;
-        height: 50px;
     }
 </style>
 <div id="app">
@@ -308,10 +284,7 @@
                 </div>
             </div>
         </div>
-         <div class="bottom-button">
-            <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" >
-            <input class="submit" type="submit" value="next >" onclick="save_data_next()">
-        </div>
+        <input type="button" value="submit" onclick="submit_data()">
     </div>
 </div>
 {% endblock %}

@@ -358,7 +358,7 @@ class WeeklySupportView(LoginRequiredMixin, TemplateView):
         return render(request, self.template_name, {'data': data})
 
     def post(self, request):
-        print("weeklysupport")
+        print("上传weeklysupport")
         data = json.loads(request.body.decode('utf8'))
         instance, created = models.WeeklySupport.objects.get_or_create(user=request.user)
         print(data)

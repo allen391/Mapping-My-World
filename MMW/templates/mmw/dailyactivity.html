@@ -33,7 +33,7 @@
             type: 'post',
             data: JSON.stringify(data),
             success: function(response) {
-{#                alert('请求成功');#}
+                alert('请求成功');
             }
         });
         console.log(data);
@@ -115,8 +115,8 @@
         </table>
       </div>
     </div>
-    <a style="margin-top: 88px" class="btn btn-lg btn-primary" href="/MMW/myhome/">go back</a>
-    <div style="float: right; margin-top: 88px">
+    <a class="btn btn-lg btn-primary" href="/MMW/myhome/">go back</a>
+    <div style="float: right">
         <button class="btn btn-lg btn-primary" onclick="save_data()">save</button>
         <button class="btn btn-lg btn-primary" style="margin-left: 20px;" onclick="save_data_and_next()">next</button>
     </div>
