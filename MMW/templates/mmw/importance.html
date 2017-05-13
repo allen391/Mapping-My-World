@@ -110,16 +110,16 @@
 <div id="app">
     <img id="bg-img" src="/static/mmw/image/importance_bg.jpg">
     <form method="post" action="/MMW/importance/">
-        <input id="area1" name="my-family" type="text">
-        <input id="area2" name="work-school" type="text">
-        <input id="area3" name="very-close-top" type="text">
-        <input id="area4" name="very-close-bottom" type="text">
-        <input id="area5" name="very-close-left" type="text">
-        <input id="area6" name="very-close-right" type="text">
-        <input id="area7" name="friends" type="text">
-        <input id="area8" name="home-supporters" type="text">
+        <input id="area1" value="{{importance.my_family}}" name="my-family" type="text">
+        <input id="area2" value="{{importance.work_school}}" name="work-school" type="text">
+        <input id="area3" value="{{importance.very_close_top}}" name="very-close-top" type="text">
+        <input id="area4" value="{{importance.very_close_bottom}}" name="very-close-bottom" type="text">
+        <input id="area5" value="{{importance.very_close_left}}" name="very-close-left" type="text">
+        <input id="area6" value="{{importance.very_close_right}}" name="very-close-right" type="text">
+        <input id="area7" value="{{importance.friends}}" name="friends" type="text">
+        <input id="area8" value="{{importance.home_supporters}}" name="home-supporters" type="text">
         <div class="bottom-button">
-            <button class="btn btn-lg btn-primary"><a>go back</a></button>
+            <button class="btn btn-lg btn-primary"><a style="color:white">go back</a></button>
             <input class="submit" type="submit" value="next >"  style="float: right" >
             <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" style="float: right" >
         </div>
@@ -127,12 +127,11 @@
 </div>
 <script>
 function send_request() {
-        alert("send request");
         // retrieve data
         var data = {
                 'my-family': $('#area1')[0].value,
                 'work-school': $('#area2')[0].value,
-                'very-close-top': $('#area')[0].value,
+                'very-close-top': $('#area3')[0].value,
                 'very-close-bottom': $('#area4')[0].value,
                 'very-close-left': $('#area5')[0].value,
                 'very-close-right': $('#area6')[0].value,
@@ -145,10 +144,9 @@ function send_request() {
             method: 'POST',
             data: data,
             success: function(response) {
-                alert("receive request")
+                $('#myModal').modal('show')
             }
         })
-        alert("ajax send request");
     }
 </script>
 {% endblock %}

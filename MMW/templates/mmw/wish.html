@@ -36,9 +36,6 @@
     border: none;
     background: white;
   }
-  .btn {
-    float: right;
-  }
 </style>
 <script>
   get_data = function() {
@@ -54,17 +51,22 @@
     console.log(list);
     return list;
   }
-  save_data = function() {
+  save_data = function(go_to_next=false) {
     var list = get_data();
     $.ajax({
       url: "/MMW/wish/",
       type: "POST",
       data: JSON.stringify(list),
       success: function(response) {
-        alert("发送成功");
+        if (go_to_next) {
         window.location = "/MMW/short_term/"
+        }
+        $('#myModal').modal('show')
       }
     });
+  }
+  submit_data = function() {
+    save_data(go_to_next=true)
   }
 </script>
 <div id="app">
@@ -123,7 +125,11 @@ work, education, hobbies and relationships, if they are relevant to you. </p>
         <td><input value="{{data.6.2}}"></input></td>
       </tr>
     </table>
-    <input type="button" class="btn btn-lg btn-primary" value="save" onclick="save_data()">
+    <div style="margin-top: 25px">
+      <a class="btn btn-lg btn-primary" href="/MMW/mydream/">go back</a>
+      <input type="button" class="btn btn-lg btn-primary" value="submit" onclick="submit_data()" style="float: right; margin-left: 20px;">
+      <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" style="float: right; border-radius: 10px; width: 100px; height: 50px;">
+    </div>
   <form>
 </div>
 {% endblock %}

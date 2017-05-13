@@ -6,7 +6,7 @@ p {
 }
 body {
   margin: 0px;
-  background: #e1e1cb;
+  background: #F1F0EB;
   width: 100%;
   height: 100%;
   display: flex;
@@ -74,7 +74,7 @@ body {
 .next-div {
 	display: flex;
 	justify-content: center;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 .name {
   height: 55px;

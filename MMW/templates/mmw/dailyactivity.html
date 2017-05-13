@@ -3,8 +3,20 @@
 <link rel="stylesheet" href="/static/mmw/dailyactivity.css">
 <script src="/static/mmw/initheight.js"></script>
 <style>
+    .desc {
+        font-size: large;
+    }
     textarea {
         height: 200px;
+    }
+    .nav-link {
+        font-size: large;
+    }
+    td {
+        font-size: x-large;
+    }
+    th {
+        font-size: x-large;
     }
 </style>
 <script>
@@ -28,12 +40,14 @@
             key = $('.tab-pane')[i].getAttribute('name');
             data[key] =get_day_data(tab_pane);
         }
+        data['do'] = $('#do')[0].value
+        data['havenotdo'] = $('#havenotdo')[0].value
         $.ajax({
             url: '/MMW/dailyactivity/',
             type: 'post',
             data: JSON.stringify(data),
             success: function(response) {
-                alert('请求成功');
+                $('#myModal').modal('show')
             }
         });
         console.log(data);
@@ -41,6 +55,8 @@
     save_data_and_next = function() {
         save_data();
         window.location = "/MMW/weeklysupport";
+    }
+    init = function() {
     }
 </script>
 <div id="app">
@@ -76,7 +92,7 @@
       </div>
       <div role="tabpanel" name="wednesday" class="tab-pane" id="wednesday_div">
         <table>
-            <tr><td>wednesday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
+            <tr><td>Wednesday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
             <tr><td>morning</td><td><textarea>{{wednesday.morning.now}}</textarea></text></td><td><textarea>{{wednesday.morning.working}}</textarea></text></td><td><textarea></textarea>{{wednesday.morning.notworking}}</text></td></tr>
             <tr><td>afternoon</td><td><textarea>{{wednesday.afternoon.now}}</textarea></text></td><td><textarea>{{wednesday.afternoon.working}}</textarea></text></td><td><textarea>{{wednesday.afternoon.notworking}}</textarea></text></td></tr>
             <tr><td>evening</td><td><textarea>{{wednesday.evening.now}}</textarea></text></td><td><textarea>{{wednesday.evening.working}}</textarea></text></td><td><textarea>{{wednesday.evening.notworking}}</textarea></text></td></tr>
@@ -84,7 +100,7 @@
       </div>
       <div role="tabpanel" name="thursday" class="tab-pane" id="thursday_div">
         <table>
-            <tr><td>thursday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
+            <tr><td>Thursday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
             <tr><td>morning</td><td><textarea>{{thursday.morning.now}}</textarea></text></td><td><textarea>{{thursday.morning.working}}</textarea></text></td><td><textarea>{{thursday.morning.notworking}}</textarea></text></td></tr>
             <tr><td>afternoon</td><td><textarea>{{thursday.afternoon.now}}</textarea></text></td><td><textarea>{{thursday.afternoon.working}}</textarea></text></td><td><textarea>{{thursday.afternoon.notworking}}</textarea></text></td></tr>
             <tr><td>evening</td><td><textarea>{{thursday.evening.now}}</textarea></text></td><td><textarea>{{thursday.evening.working}}</textarea></text></td><td><textarea>{{thursday.evening.notworking}}</textarea></text></td></tr>
@@ -92,7 +108,7 @@
       </div>
       <div role="tabpanel" name="friday" class="tab-pane" id="friday_div">
         <table>
-            <tr><td>friday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
+            <tr><td>Friday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
             <tr><td>morning</td><td><textarea>{{friday.morning.now}}</textarea></text></td><td><textarea>{{friday.morning.working}}</textarea></text></td><td><textarea>{{friday.morning.notworking}}</textarea></text></td></tr>
             <tr><td>afternoon</td><td><textarea>{{friday.afternoon.now}}</textarea></text></td><td><textarea>{{friday.afternoon.working}}</textarea></text></td><td><textarea>{{friday.afternoon.notworking}}</textarea></text></td></tr>
             <tr><td>evening</td><td><textarea>{{friday.evening.now}}</textarea></text></td><td><textarea>{{friday.evening.working}}</textarea></text></td><td><textarea>{{friday.evening.notworking}}</textarea></text></td></tr>
@@ -100,7 +116,7 @@
       </div>
       <div role="tabpanel" name="saturday" class="tab-pane" id="saturday_div">
         <table>
-            <tr><td>saturday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
+            <tr><td>Saturday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
             <tr><td>morning</td><td><textarea>{{saturday.morning.now}}</textarea></text></td><td><textarea>{{saturday.morning.now}}</textarea></text></td><td><textarea>{{saturday.morning.notworking}}</textarea></text></td></tr>
             <tr><td>afternoon</td><td><textarea>{{saturday.afternoon.now}}</textarea></text></td><td><textarea>{{saturday.afternoon.working}}</textarea></text></td><td><textarea>{{saturday.afternoon.notworking}}</textarea></text></td></tr>
             <tr><td>evening</td><td><textarea>{{saturday.evening.now}}</textarea></text></td><td><textarea>{{saturday.evening.working}}</textarea></text></td><td><textarea>{{saturday.evening.notworking}}</textarea></text></td></tr>
@@ -108,15 +124,28 @@
       </div>
       <div role="tabpanel" name="sunday" class="tab-pane" id="sunday_div">
         <table>
-            <tr><td>sunday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
+            <tr><td>Sunday</td><th>What I do now:</th><th>What is working well:</th><th>What is not working well:</th></tr>
             <tr><td>morning</td><td><textarea>{{sunday.morning.now}}</textarea></text></td><td><textarea>{{sunday.morning.working}}</textarea></text></td><td><textarea>{{sunday.morning.notworking}}</textarea></text></td></tr>
             <tr><td>afternoon</td><td><textarea>{{sunday.afternoon.now}}</textarea></text></td><td><textarea>{{sunday.afternoon.working}}</textarea></text></td><td><textarea>{{sunday.afternoon.notworking}}</textarea></text></td></tr>
             <tr><td>evening</td><td><textarea>{{sunday.evening.now}}</textarea></text></td><td><textarea>{{sunday.evening.working}}</textarea></text></td><td><textarea>{{sunday.evening.notworking}}</textarea></text></td></tr>
         </table>
       </div>
     </div>
-    <a class="btn btn-lg btn-primary" href="/MMW/myhome/">go back</a>
-    <div style="float: right">
+    <div style="display: flex; flex-direction: column">
+        <h3>Don't forget to inlcude your hobbies an interests!</h3>
+        <div style="display: flex;">
+            <div style="width: 49%">
+                <p>Thins I do sometimes</p>
+                <textarea id="do">{{do}}</textarea>
+            </div>
+            <div style="width: 49%">
+                <p>Thins I lkie but haven't done for a while</p>
+                <textarea id="havenotdo">{{havenotdo}}</textarea>
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-lg btn-primary" href="/MMW/myhome/" style="margin-top: 20px">go back</a>
+    <div style="float: right; margin-top: 20px">
         <button class="btn btn-lg btn-primary" onclick="save_data()">save</button>
         <button class="btn btn-lg btn-primary" style="margin-left: 20px;" onclick="save_data_and_next()">next</button>
     </div>

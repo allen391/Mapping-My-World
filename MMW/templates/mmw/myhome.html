@@ -42,14 +42,14 @@
         </div>
     </div>
     <div class="bottom-button">
-        <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" >
-        <input class="submit" type="submit" value="next >">
-        </div>
+        <a href="/MMW/importance/" class="btn btn-lg btn-primary">go back</a>
+        <input class="submit" type="submit" value="next >" style="float:right">
+        <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" style="float:right">
+    </div>
     </form>
 </div>
 <script>
     function send_request() {
-        alert("send request");
         // retrieve data
         var data = {
                 'text1': $('#area1')[0].value,
@@ -64,10 +64,9 @@
             method: 'POST',
             data: data,
             success: function(response) {
-                alert("receive request")
+                $('#myModal').modal('show')
             }
         });
-        alert("ajax send request");
     }
 </script>
 {% endblock %}

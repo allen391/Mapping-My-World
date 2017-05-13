@@ -2,9 +2,32 @@
 {% block app %}
 <script>
     delete_parent = function () {
-        event.target.parentElement.innerHTML = "";
+        var index = event.target.className.split('-').pop();
+        console.log(index);
+        var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
+        for (var i=0; i<=3; i++) {
+            console.log(i);
+            var select = "#" + node_ids[i] + " .outer-textbox-" + index;
+            console.log(select);
+            dom = $(select)[0];
+            console.log($(select));
+            console.log(dom);
+            dom.innerHTML = "";
+        }
+    }
+    delete_parent2 = function(dom) {
+        var index = event.target.className.split('-').pop();
+        console.log(index);
+        var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
+        for (var i=0; i<=3; i++) {
+            var select = "#" + node_ids[i] + " .outer-textbox-" + index;
+            console.log(select);
+            dom = $(select)[0];
+            dom.innerHTML = "";
+        }
     }
     var add_textarea = function () {
+        var unique_id = parseInt(Math.random() * 65999);
         var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
         for (var i=0; i<=3; i++) {
             var node_id = node_ids[i];
@@ -18,11 +41,11 @@
             if (i==2) {
                 delete_dom = document.createElement('button');
                 delete_dom.innerText = "delete";
-                delete_dom.className = "delete-button"
+                delete_dom.className = "btn btn-primary delete-button" + " " + "delete-button-" + unique_id;
                 delete_dom.addEventListener('click', delete_parent)
             }
             div_dom = document.createElement('div')
-            div_dom.className = "outer-textbox";
+            div_dom.className = "outer-textbox" + " " + "outer-textbox-" +  unique_id;
 
             div_dom.appendChild(textarea_dom);
             if (i==2) {
@@ -32,7 +55,7 @@
             parent_dom.appendChild(div_dom)
         }
     };
-    submit_data = function () {
+    submit_data = function (go_to_next=true) {
         var doms1 = $('#outer-ul textarea');
         var doms2 = $('#outer-ul2 textarea');
         var doms3 = $('#outer-ul3 textarea');
@@ -71,18 +94,21 @@
         }
         full_data['often'] = data_list4;
         full_data['not_currently_use'] = data_list5;
-        alert("data_list");
-        alert("send data");
         $.ajax({
                     url: '/MMW/equipment/',
                     type: 'post',
                     data: JSON.stringify(full_data),
                     success: function (response) {
-                        alert("retrieve data")
+                        $('#myModal').modal('show')
+                        if (go_to_next) {
                         window.location = "/MMW/mydream/"
+                        }
                     }
                 }
         )
+    }
+    save_data = function() {
+        submit_data(go_to_next=false);
     }
 </script>
 <style>
@@ -118,7 +144,7 @@
         text-align: left;
         height: 88px;
         background-color: lightblue;
-        margin-bottom: 50px;
+        margin-bottom: 54px;
     }
     #program-id {
         margin-top: 40px;
@@ -133,7 +159,7 @@
         height: 200px;
     }
     .last-des {
-        margin-top: 75px;
+        margin-top: 47px;
     }
     .outer-textarea-delete {
         margin-bottom: 21px;
@@ -224,7 +250,7 @@
             <div class="col-md-3 col-ld-3">
                 <ul id="outer-ul" class="outer-ul" >
                     {% for textarea in textareas.program_add %}
-                    <div class="outer-textbox">
+                    <div class="outer-textbox outer-textbox-{{forloop.counter}}">
                         <textarea class="outer-textarea">{{textarea}}</textarea>
                     </div>
                     {% endfor %}
@@ -234,7 +260,7 @@
                 <ul id="outer-ul2" class="outer-ul">
 
                     {% for textarea in textareas.who_add %}
-                    <div class="outer-textbox">
+                    <div class="outer-textbox outer-textbox-{{forloop.counter}}">
                         <textarea class="outer-textarea">{{textarea}}</textarea>
                     </div>
                     {% endfor %}
@@ -243,9 +269,9 @@
              <div class="col-md-3 col-ld-3">
                 <ul id="outer-ul3" class="outer-ul">
                     {% for textarea in textareas.purpose_add %}
-                    <div class="outer-textbox">
+                    <div class="outer-textbox outer-textbox-{{forloop.counter}}">
                         <textarea class="outer-textarea outer-textarea-delete">{{textarea}}</textarea>
-                        <button class="delete-button" onclick="delete_parent()">delete</button>
+                        <button class=" btn btn-primary delete-button delete-button-{{forloop.counter}}" onclick="delete_parent2(this)">delete</button>
                     </div>
                     {% endfor %}
                 </ul>
@@ -253,12 +279,12 @@
             <div class="col-md-3 col-ld-3">
                 <ul id="outer-ul4" class="outer-ul">
                     {% for textarea in textareas.often_add %}
-                    <div class="outer-textbox">
+                    <div class="outer-textbox outer-textbox-{{forloop.counter}}">
                         <textarea class="outer-textarea">{{textarea}}</textarea>
                     </div>
                     {% endfor %}
                 </ul>
-                <button id="program-id" onclick="add_textarea()">add more content</button>
+                <button id="program-id" class="btn btn-lg btn-primary" onclick="add_textarea()">add more content</button>
             </div>
         </div>
         <div class="row">
@@ -269,7 +295,11 @@
                 </div>
             </div>
         </div>
-        <input type="button" value="submit" onclick="submit_data()">
+        <div style="margin-top: 40px">
+            <a class="btn btn-lg btn-primary" href="/MMW/program/">go back</a>
+            <input  class="btn btn-lg btn-primary m-l" type="button" value="submit" onclick="submit_data()" style="float: right; margin-left: 30px;">
+            <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" style="float: right; border-radius: 10px; width: 100px; height: 50px;">
+        </div>
     </div>
 </div>
 {% endblock %}

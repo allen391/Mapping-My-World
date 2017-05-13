@@ -113,9 +113,13 @@
             </div>
         </form>
     </div>
+
+
+
+
 <script>
 function send_request() {
-        alert("send request");
+        // alert("send request");
         // retrieve data
         var data = {
                 'text1': $('#area1')[0].value,
@@ -129,10 +133,11 @@ function send_request() {
             method: 'POST',
             data: data,
             success: function(response) {
-                alert("receive request")
+                // alert("save successfully")
+                $('#myModal').modal('show')
             }
         })
-        alert("ajax send request");
+        // alert("ajax send request");
     }
 </script>
 {% endblock %}

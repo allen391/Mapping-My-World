@@ -44,6 +44,20 @@
         margin-top: 5%;
     }
 </style>
+<script>
+    save_data = function(dom) {
+        $.ajax({
+            url: "/MMW/bucket_list/",
+            type: "POST",
+            data: {
+                "text": dom.parentElement.parentElement['text'].value
+            },
+            success: function(response) {
+                $('#myModal').modal('show')
+            }
+        })
+    }
+</script>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
@@ -61,7 +75,11 @@
                     <textarea class="text" name="text" id="text">{{ instance.text }}</textarea>
                 </div>
             </div>
-            <input class="submit" type="submit" value="save >">
+            <div style="margin-top: 25px">
+              <a class="btn btn-lg btn-primary" href="/MMW/long_term/">go back</a>
+              <input type="submit" class="btn btn-lg btn-primary" value="next"  style="float: right; margin-left: 20px;">
+              <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data(this)" style="float: right; border-radius: 10px; width: 100px; height: 50px;">
+            </div>
         </form>
     </div>
 </div>

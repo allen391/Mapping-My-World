@@ -128,7 +128,7 @@ class ImportanceView(LoginRequiredMixin, TemplateView):
     def get(self, request):
         importance, created = models.Importance.objects.get_or_create(user=request.user)
         print(importance.my_family)
-        return render(request, "mmw/importance.html", {})
+        return render(request, "mmw/importance.html", {"importance": importance})
 
     def post(self, request):
         print("your already upload your information")
@@ -152,11 +152,11 @@ class ImportanceView(LoginRequiredMixin, TemplateView):
             instance.friends = text7
             instance.home_supporters = text8
             instance.save()
-            return render(request, "mmw/myhome.html", {})
+            return HttpResponseRedirect("/MMW/myhome/")
         else:
             whoiam = models.WhoIAm.objects.create(user=request.user, text1=text1, text2=text2, text3=text3, text4=text4, text5=text5, text6=text6, text7=text7, text8=text8)
             whoiam.save()
-            return render(request, "mmw/myhome.html", {})
+            return HttpResponseRedirect("/MMW/myhome/")
 
 
 class communication(LoginRequiredMixin, TemplateView):
@@ -204,12 +204,16 @@ class DailyactivityView(LoginRequiredMixin, TemplateView):
         instance, created = models.Activity.objects.get_or_create(user=request.user)
         context = {}
         context = json.loads(instance.data)
+        context['do'] = instance.do
+        context['havenotdo'] = instance.havenotdo
         return render(request, 'mmw/dailyactivity.html', context)
 
     def post(self, request):
         data = json.loads(request.body.decode('utf8'))
         instance, created = models.Activity.objects.get_or_create(user=request.user)
         instance.data = json.dumps(data, indent=4)
+        instance.do = data['do']
+        instance.havenotdo = data['havenotdo']
         instance.save()
         return HttpResponse("save successfully")
 
@@ -312,11 +316,16 @@ class BucketListView(LoginRequiredMixin, TemplateView):
         if instance is not None:
             instance.text = text
             instance.save()
-            return HttpResponseRedirect('/MMW/bucket_list/')
+            return HttpResponseRedirect('/MMW/congratulations/')
         else:
             long_term = models.Bulk_list.objects.create(user=request.user, text=text)
             long_term.save()
-            return HttpResponseRedirect('/MMW/bucket_list/')
+            return HttpResponseRedirect('/MMW/congratulations/')
+
+
+class CongratulationsView(LoginRequiredMixin, TemplateView):
+    template_name = 'mmw/congratulations.html'
+    login_url = "/"
 
 
 class ActivityView(TemplateView):

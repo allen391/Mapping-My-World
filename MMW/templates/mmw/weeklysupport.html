@@ -12,7 +12,21 @@
                 type: 'POST',
                 data: JSON.stringify(data),
                 success: function(response) {
-                    alert("data sent");
+                    $('#myModal').modal('show')
+                },
+            });
+        }
+        save_data_next = function() {
+            data = []
+            doms = $('textarea')
+            for (var i=0; i<doms.length; i++ ) {
+                data.push(doms[i].value)
+            }
+            $.ajax({
+                url: '/MMW/weeklysupport/',
+                type: 'POST',
+                data: JSON.stringify(data),
+                success: function(response) {
                     window.location="/MMW/health";
                 },
             });
@@ -100,6 +114,7 @@
         <a class="btn btn-lg btn-primary" href="/MMW/dailyactivity/">go back</a>
         <div style="float: right">
             <input class="btn btn-lg btn-primary" style="margin-left: 20px;" type="button" onclick="save_data()" value="save">
+            <input class="btn btn-lg btn-primary" style="margin-left: 20px;" type="button" onclick="save_data_next()" value="next">
         </div>
         </form>
     </div>

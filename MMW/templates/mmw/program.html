@@ -41,7 +41,7 @@
             if (i==2) {
                 delete_dom = document.createElement('button');
                 delete_dom.innerText = "delete";
-                delete_dom.className = "delete-button" + " " + "delete-button-" + unique_id;
+                delete_dom.className = "btn btn-primary delete-button" + " " + "delete-button-" + unique_id;
                 delete_dom.addEventListener('click', delete_parent)
             }
             div_dom = document.createElement('div')
@@ -55,7 +55,7 @@
             parent_dom.appendChild(div_dom)
         }
     };
-    submit_data = function () {
+    submit_data = function (go_to_next=true) {
         var doms1 = $('#outer-ul textarea');
         var doms2 = $('#outer-ul2 textarea');
         var doms3 = $('#outer-ul3 textarea');
@@ -94,18 +94,21 @@
         }
         full_data['often'] = data_list4;
         full_data['not_currently_use'] = data_list5;
-        alert("data_list");
-        alert("send data");
         $.ajax({
                     url: '/MMW/program/',
                     type: 'post',
                     data: JSON.stringify(full_data),
                     success: function (response) {
-                        alert("retrieve data")
-                        window.location = "/MMW/equipment/";
+                        $('#myModal').modal('show')
+                        if (go_to_next) {
+                            window.location = "/MMW/equipment/";
+                        }
                     }
                 }
         )
+    }
+    save_data = function() {
+        submit_data(go_to_next=false);
     }
 </script>
 <style>
@@ -132,7 +135,7 @@
         text-align: left;
         height: 88px;
         background-color: lightblue;
-        margin-bottom: 50px;
+        margin-bottom: 54px;
     }
     #program-id {
         margin-top: 40px;
@@ -260,7 +263,7 @@
                     {% for textarea in textareas.purpose_add %}
                     <div class="outer-textbox outer-textbox-{{forloop.counter}}">
                         <textarea class="outer-textarea outer-textarea-delete">{{textarea}}</textarea>
-                        <button class="delete-button delete-button-{{forloop.counter}}" onclick="delete_parent2(this)">delete</button>
+                        <button class=" btn btn-primary delete-button delete-button-{{forloop.counter}}" onclick="delete_parent2(this)">delete</button>
                     </div>
                     {% endfor %}
                 </ul>
@@ -273,7 +276,7 @@
                     </div>
                     {% endfor %}
                 </ul>
-                <button id="program-id" onclick="add_textarea()">add more content</button>
+                <button id="program-id" class="btn btn-lg btn-primary" onclick="add_textarea()">add more content</button>
             </div>
         </div>
         <div class="row">
@@ -284,7 +287,11 @@
                 </div>
             </div>
         </div>
-        <input type="button" value="submit" onclick="submit_data()">
+        <div style="margin-top: 40px">
+            <a class="btn btn-lg btn-primary" href="/MMW/health/">go back</a>
+            <input  class="btn btn-lg btn-primary m-l" type="button" value="submit" onclick="submit_data()" style="float: right; margin-left: 30px;">
+            <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" style="float: right; border-radius: 10px; width: 100px; height: 50px;">
+        </div>
     </div>
 </div>
 {% endblock %}

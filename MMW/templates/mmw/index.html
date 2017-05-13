@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="/static/datetimepicker/bootstrap-datetimepicker.min.css">
     <script src="/static/mmw/index.js"></script>
     <style>
+        #app {
+          background-image:
+            url("/static/mmw/image/homepage_bg.jpg"),
+            url("/static/mmw/image/homepage_bg2.jpg");
+          background-repeat: no-repeat, no-repeat;
+          background-position: 100% 0%, 0% 0%;
+          background-size: 30% 30%, 30% 30%;
+          width: 100%;
+        }
         .errors-message{
             position: relative;
             left: 104px;
@@ -20,12 +29,6 @@
   </head>
   <body onload="init()">
     <div id="app">
-      <ul class="nav nav-tabs nav-justified">
-        <li role="presentation"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">About us</a></li>
-        <li role="presentation"><a href="#">Support me</a></li>
-        <li role="presentation"><a href="#">Contact us</a></li>
-      </ul>
       <div id="container">
         <div>
           <span class="title1"><strong>Mapping My World</strong></span>
@@ -69,7 +72,7 @@
           </div>
           <div class="next-div">
             <input class="btn btn-primary btn-lg" type="submit" value="Register">
-            <input class="btn btn-primary btn-lg m-1" style="margin-left: 10px" type="button" value="login" onclick="login()">
+            <input class="btn btn-primary btn-lg m-1" style="margin-left: 10px; width: 94.9px" type="button" value="login" onclick="login()">
           </div>
         </form>
       </div>

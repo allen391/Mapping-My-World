@@ -288,3 +288,5 @@ class Activity(models.Model):
     }
     user = models.OneToOneField(User)
     data = models.TextField("My Activity", default=json.dumps(DATA))
+    do = models.TextField(default="")
+    havenotdo = models.TextField(default="")

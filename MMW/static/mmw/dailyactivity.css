@@ -29,6 +29,6 @@ textarea {
 ul {
     list-style:square url("/static/mmw/image/arrow.jpg");
 }
-li {
+#invite_tabs li {
     margin: 25px;
 }
