@@ -71,14 +71,14 @@ class CommunicationHistory(models.Model):
 
 class Importance(models.Model):
     user = models.OneToOneField(User)
-    my_family = models.TextField("How i want to be involved:", max_length=128, null=True)
-    work_school = models.TextField("How i want to be involved:", max_length=128, null=True)
-    very_close_top = models.TextField("Who i want to help me in my NDIS planning meeting", max_length=128, null=True)
-    very_close_bottom = models.TextField("What my NDIS representative needs to know about how i communication:", max_length=128,null=True)
-    very_close_left = models.TextField("Who makes the final decisions", max_length=128, null=True)
-    very_close_right = models.TextField("Who makes the final decisions", max_length=128, null=True)
-    friends = models.TextField("Who makes the final decisions", max_length=128, null=True)
-    home_supporters = models.TextField("Who makes the final decisions", max_length=128, null=True)
+    my_family = models.TextField("How i want to be involved:", max_length=128)
+    work_school = models.TextField("How i want to be involved:", max_length=128)
+    very_close_top = models.TextField("Who i want to help me in my NDIS planning meeting", max_length=128)
+    very_close_bottom = models.TextField("What my NDIS representative needs to know about how i communication:", max_length=128)
+    very_close_left = models.TextField("Who makes the final decisions", max_length=128)
+    very_close_right = models.TextField("Who makes the final decisions", max_length=128)
+    friends = models.TextField("Who makes the final decisions", max_length=128)
+    home_supporters = models.TextField("Who makes the final decisions", max_length=128)
 
 
 class MyHome(models.Model):

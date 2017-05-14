@@ -1,30 +1,47 @@
 {% extends 'base.html' %}
 {% block app %}
 <script>
+    init = function() {
+    }
     delete_parent = function () {
-        var index = event.target.className.split('-').pop();
-        console.log(index);
-        var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
-        for (var i=0; i<=3; i++) {
-            console.log(i);
-            var select = "#" + node_ids[i] + " .outer-textbox-" + index;
-            console.log(select);
-            dom = $(select)[0];
-            console.log($(select));
-            console.log(dom);
-            dom.innerHTML = "";
-        }
+
+        dom = event.target;
+        console.log(dom);
+        $('#deleteModal').on('show.bs.modal', function(e) {
+            confirm = function() {
+                var index = dom.className.split('-').pop();
+                console.log(index);
+                var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
+                for (var i=0; i<=3; i++) {
+                    console.log(i);
+                    var select = "#" + node_ids[i] + " .outer-textbox-" + index;
+                    console.log(select);
+                    dom = $(select)[0];
+                    console.log($(select));
+                    console.log(dom);
+                    dom.innerHTML = "";
+                }
+                $('#deleteModal').modal('hide');
+            }
+        });
+        $('#deleteModal').modal('show');
     }
     delete_parent2 = function(dom) {
-        var index = event.target.className.split('-').pop();
-        console.log(index);
-        var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
-        for (var i=0; i<=3; i++) {
-            var select = "#" + node_ids[i] + " .outer-textbox-" + index;
-            console.log(select);
-            dom = $(select)[0];
-            dom.innerHTML = "";
-        }
+        $('#deleteModal').on('show.bs.modal', function(e) {
+            confirm = function() {
+                var index = dom.className.split('-').pop();
+                console.log(index);
+                var node_ids = ["outer-ul", "outer-ul2", "outer-ul3", "outer-ul4"];
+                for (var i=0; i<=3; i++) {
+                    var select = "#" + node_ids[i] + " .outer-textbox-" + index;
+                    console.log(select);
+                    dom = $(select)[0];
+                    dom.innerHTML = "";
+                }
+                $('#deleteModal').modal('hide');
+            }
+        });
+        $('#deleteModal').modal('show');
     }
     var add_textarea = function () {
         var unique_id = parseInt(Math.random() * 65999);
@@ -302,5 +319,29 @@
         </div>
     </div>
 </div>
+
+
+<!-- 删除确认的Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        Are you sure to delete?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary" onclick="confirm()">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
 
