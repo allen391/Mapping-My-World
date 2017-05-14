@@ -19,7 +19,7 @@ class IndexView(TemplateView):
     template_name = "mmw/index.html"
 
 
-class LoginView(TemplateView):
+class LoginView(LoginRequiredMixin, TemplateView):
     template_name = "mmw/whoiam.html"
 
     def post(self, request):
