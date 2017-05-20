@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth.models import User
 from django.contrib.auth import login
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect, HttpResponse
 from . import models
@@ -19,8 +20,14 @@ class IndexView(TemplateView):
     template_name = "mmw/index.html"
 
 
-class LoginView(LoginRequiredMixin, TemplateView):
+class LoginView(TemplateView):
     template_name = "mmw/whoiam.html"
+
+    def get(self, request):
+        if request.user and request.user.username:
+            return super(LoginView, self).get(request)
+        else:
+            return HttpResponseRedirect('/')
 
     def post(self, request):
         print("you already upload details")
@@ -471,3 +478,8 @@ class HowIWishView(LoginRequiredMixin, TemplateView):
         instance.data = request.body.decode('utf8')
         instance.save()
         return HttpResponse("发送成功")
+
+
+class UserManualView(LoginRequiredMixin, TemplateView):
+    template_name = "mmw/usermanual.html"
+    login_url = '/'

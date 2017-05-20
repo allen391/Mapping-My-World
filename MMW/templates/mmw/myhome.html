@@ -2,6 +2,14 @@
 {% block app %}
 <link rel="stylesheet" href="/static/mmw/myhome.css">
 <script src="/static/mmw/initheight.js"></script>
+<style>
+  p {
+    font-size: large;
+  }
+  h4 {
+    font-size: large;
+  }
+</style>
 <div id="app">
     <div class="header">
         <h1>4. My Home</h1>
@@ -42,8 +50,8 @@
         </div>
     </div>
     <div class="bottom-button">
-        <a href="/MMW/importance/" class="btn btn-lg btn-primary">go back</a>
-        <input class="submit" type="submit" value="next >" style="float:right">
+        <a href="/MMW/importance/" class="btn btn-lg btn-primary">&lt; Go Back</a>
+        <input class="submit" type="submit" value="Next >" style="float:right">
         <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" style="float:right">
     </div>
     </form>

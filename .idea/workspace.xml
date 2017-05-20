@@ -4,9 +4,25 @@
     <list default="true" id="2fed9ebd-667d-4f04-a999-18cf3a013fd1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/static/mmw/index.css" afterPath="$PROJECT_DIR$/MMW/static/mmw/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/base.html" afterPath="$PROJECT_DIR$/MMW/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/bucket_list.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/bucket_list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/communication.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/communication.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/congratulations.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/congratulations.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/dailyactivity.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/dailyactivity.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/equipment.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/equipment.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/health.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/health.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/importance.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/importance.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/index.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/long_term_dream.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/long_term_dream.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/mydream.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/mydream.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/myhome.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/myhome.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/program.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/program.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/short_term_dream.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/short_term_dream.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/weeklysupport.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/weeklysupport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/whoiam.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/whoiam.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/templates/mmw/wish.html" afterPath="$PROJECT_DIR$/MMW/templates/mmw/wish.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/urls.py" afterPath="$PROJECT_DIR$/MMW/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MMW/views.py" afterPath="$PROJECT_DIR$/MMW/views.py" />
     </list>
     <ignored path="untitled7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,94 +48,7 @@
     <favorites_list name="untitled7" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="congratulations.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/congratulations.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-              <folding>
-                <element signature="e#110#130#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="equipment.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/equipment.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="330" column="44" selection-start-line="330" selection-start-column="44" selection-end-line="330" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myhome.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/myhome.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-779">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="program.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/program.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="185" column="45" selection-start-line="185" selection-start-column="45" selection-end-line="185" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3795">
-              <caret line="148" column="10" selection-start-line="148" selection-start-column="10" selection-end-line="148" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-              <folding>
-                <element signature="n#style#0;n#input#1;n#div#1;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/static/mmw/index.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2092">
-              <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MMW/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="80" column="86" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="86" />
-              <folding>
-                <element signature="e#5661#8883#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -151,6 +80,7 @@
       <find>buck</find>
       <find>网页</find>
       <find>delete_parent</find>
+      <find>user</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -159,7 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MMW/templates/includes/list.html" />
         <option value="$PROJECT_DIR$/MMW/static/mmw/initheight.js" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/daliyactivity1.html" />
         <option value="$PROJECT_DIR$/MMW/static/mmw/dailyactivity1.css" />
@@ -198,18 +127,19 @@
         <option value="$PROJECT_DIR$/MMW/templates/mmw/short_term_dream.html" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/long_term_dream.html" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/bucket_list.html" />
-        <option value="$PROJECT_DIR$/MMW/urls.py" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/congratulations.html" />
-        <option value="$PROJECT_DIR$/MMW/views.py" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/dailyactivity.html" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/equipment.html" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/importance.html" />
         <option value="$PROJECT_DIR$/MMW/models.py" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/health.html" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/program.html" />
-        <option value="$PROJECT_DIR$/MMW/templates/base.html" />
         <option value="$PROJECT_DIR$/MMW/static/mmw/index.css" />
         <option value="$PROJECT_DIR$/MMW/templates/mmw/index.html" />
+        <option value="$PROJECT_DIR$/MMW/templates/mmw/usermenu.html" />
+        <option value="$PROJECT_DIR$/MMW/templates/base.html" />
+        <option value="$PROJECT_DIR$/MMW/urls.py" />
+        <option value="$PROJECT_DIR$/MMW/views.py" />
       </list>
     </option>
   </component>
@@ -220,8 +150,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="225" />
-    <option name="y" value="310" />
+    <option name="x" value="400" />
+    <option name="y" value="274" />
     <option name="width" value="1694" />
     <option name="height" value="954" />
   </component>
@@ -250,6 +180,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -340,32 +271,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MMW" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MMW" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MMW" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mmw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -377,15 +285,16 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\MMW\MMW\templates\mmw" />
+      <recent name="C:\Users\chent\cth\Lib\site-packages\urlparse2" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\tool\pycharm\MMW\MMW\static\mmw\image" />
       <recent name="C:\tool\pycharm\MMW\MMW" />
       <recent name="C:\tool\pycharm\MMW\MMW\templates\mmw" />
       <recent name="C:\tool\pycharm\untitled7\MMW\templates" />
       <recent name="C:\tool\pycharm\untitled7\MMW\templates\mmw" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\chent\cth\Lib\site-packages\urlparse2" />
     </key>
   </component>
   <component name="RunManager" selected="Python.test_py">
@@ -741,10 +650,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="225" y="310" width="1694" height="954" extended-state="0" />
-    <editor active="true" />
+    <frame x="400" y="274" width="1694" height="954" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.250306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.249694" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -753,7 +662,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19732034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19610232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39976552" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -824,13 +733,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MMW/static/mmw/activity.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MMW/static/mmw/mydailyactivity.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -975,13 +877,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="34" column="56" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/bucket_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -993,15 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="49" column="27" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="68" column="43" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,7 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="51" column="59" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,7 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="39" column="23" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,7 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1909">
           <caret line="83" column="43" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,7 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="121" column="99" selection-start-line="121" selection-start-column="99" selection-end-line="121" selection-end-column="99" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1055,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
           <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="76" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1071,67 +951,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="75" column="54" selection-start-line="75" selection-start-column="54" selection-end-line="75" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/congratulations.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-          <folding>
-            <element signature="e#110#130#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/equipment.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="330" column="44" selection-start-line="330" selection-start-column="44" selection-end-line="330" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="7590">
+          <caret line="330" column="32" selection-start-line="330" selection-start-column="32" selection-end-line="330" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MMW/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
+        <state relative-caret-position="1794">
           <caret line="80" column="86" selection-start-line="80" selection-start-column="86" selection-end-line="80" selection-end-column="86" />
-          <folding>
-            <element signature="e#5661#8883#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/myhome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-779">
+        <state relative-caret-position="552">
           <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/program.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="185" column="45" selection-start-line="185" selection-start-column="45" selection-end-line="185" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MMW/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3795">
-          <caret line="148" column="10" selection-start-line="148" selection-start-column="10" selection-end-line="148" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="4255">
+          <caret line="185" column="14" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MMW/static/mmw/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2092">
-          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="1610">
+          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1139,11 +993,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#input#1;n#div#1;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/congratulations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="35" column="42" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="464" column="57" selection-start-line="464" selection-start-column="57" selection-end-line="464" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="111" column="46" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MMW/templates/mmw/usermenu.html" />
   </component>
 </project>

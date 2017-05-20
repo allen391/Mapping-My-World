@@ -3,6 +3,9 @@
 <link rel="stylesheet" href="/static/mmw/dailyactivity.css">
 <script src="/static/mmw/initheight.js"></script>
 <style>
+    p {
+      font-size: large;
+    }
     .desc {
         font-size: large;
     }
@@ -11,6 +14,9 @@
     }
     .nav-link {
         font-size: large;
+    }
+    .active > .nav-link {
+        background-color: #bbb !important
     }
     td {
         font-size: x-large;
@@ -144,10 +150,10 @@
             </div>
         </div>
     </div>
-    <a class="btn btn-lg btn-primary" href="/MMW/myhome/" style="margin-top: 20px">go back</a>
+    <a class="btn btn-lg btn-primary" href="/MMW/myhome/" style="margin-top: 20px">&lt; Go Back</a>
     <div style="float: right; margin-top: 20px">
         <button class="btn btn-lg btn-primary" onclick="save_data()">save</button>
-        <button class="btn btn-lg btn-primary" style="margin-left: 20px;" onclick="save_data_and_next()">next</button>
+        <button class="btn btn-lg btn-primary" style="margin-left: 20px;" onclick="save_data_and_next()">Next &gt;</button>
     </div>
 </div>
 {% endblock %}

@@ -32,5 +32,6 @@ urlpatterns = [
     url(r'^bucket_list/$', views.BucketListView.as_view(), name='bucket_list'),
     url(r'^mydream/$', views.MyDreamView.as_view(), name="mydream"),
     url(r'^wish/$', views.HowIWishView.as_view(), name="wish"),
-    url(r'^congratulations/$', views.CongratulationsView.as_view(), name="congratulations")
+    url(r'^congratulations/$', views.CongratulationsView.as_view(), name="congratulations"),
+    url(r'^usermanual/$', views.UserManualView.as_view(), name="usermanual"),
 ]
