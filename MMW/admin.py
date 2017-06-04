@@ -30,6 +30,12 @@ admin.site.register(models.WeeklySupport)
 admin.site.register(models.Health)
 admin.site.register(models.Activity)
 admin.site.register(models.Short_term)
+admin.site.register(models.Importance)
+admin.site.register(models.Equipment)
+admin.site.register(models.Wish)
+admin.site.register(models.Long_term)
+admin.site.register(models.Bulk_list)
+
 
 admin.site.register(models.MyHome, ContentAdmin)
 

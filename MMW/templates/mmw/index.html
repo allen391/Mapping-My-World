@@ -64,7 +64,10 @@
                 <p class="errors-message">register successfully</p>
             {% endif %}
             {% if emailnone %}
-                <p class="errors-message">email address cannot be none</p>
+                <p class="errors-message">email address or username cannot be none</p>
+            {% endif %}
+            {% if email_no_exist %}
+                <p class="errors-message">you haven't registered</p>
             {% endif %}
             {% if logout %}
                 <p class="errors-message">log out successfully</p>

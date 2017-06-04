@@ -46,6 +46,7 @@ class LoginView(TemplateView):
                 print("wrong username")
                 return render(request, "mmw/index.html", {"error": True})
         else:
+            return render(request, "mmw/index.html", {"email_no_exist": True})
             print("you are new user")
             user = User.objects.create_user(username=uuid.uuid4().hex[0:10])
             print("user created")
@@ -65,7 +66,7 @@ class RegisterView(TemplateView):
         print("email" + request.POST["email"])
         name = request.POST["name"]
         email = request.POST["email"]
-        if email == '':
+        if email == '' or name == "":
             return render(request, "mmw/index.html", {"emailnone": True})
         instance = models.UserInfo.objects.filter(email=email).first()
         if instance:
