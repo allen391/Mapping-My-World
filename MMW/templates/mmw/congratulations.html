@@ -2,5 +2,16 @@
 {% block app %}
 <div id="app">
     <img src="/static/mmw/image/congratulations.jpg" style="width: 100%;">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/15.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
+    <div>
+        <a style="font-size: 47px" class="btn-lg btn-primary" href="/MMW/whoiam/">Play Again</a>
+        <a style="font-size: 47px; margin-left:400px" class="btn-lg btn-primary" href="/MMW/logout/">Log Out</a>
+    </div>
 </div>
 {% endblock %}

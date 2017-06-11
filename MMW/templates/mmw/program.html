@@ -184,10 +184,17 @@
     }
 </style>
 <div id="app">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/9.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
     <div id="container">
         <div class="row">
             <div class="col-md-12" id="header">
-                <h1>8. My programs and therapy supports
+                <h1>My programs and therapy supports
     </h1>
                 <img src="">
             </div>
@@ -312,7 +319,7 @@
             </div>
         </div>
         <div style="margin-top: 40px">
-            <a class="btn btn-lg btn-primary" href="/MMW/health/">&lt; Go Back</a>
+            <a class="btn btn-lg btn-primary" href="/MMW/health/">&lt;  Back</a>
             <input  class="btn btn-lg btn-primary m-l" type="button" value="Next >" onclick="submit_data()" style="float: right; margin-left: 30px;">
             <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" style="float: right; border-radius: 10px; width: 100px; height: 50px;">
         </div>

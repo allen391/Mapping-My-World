@@ -189,10 +189,17 @@
     }
 </style>
 <div id="app">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/10.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
     <div id="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="big-title">9. My equipment, aid or modification support</h1>
+                <h1 class="big-title">My equipment, aid or modification support</h1>
                 <img src="">
             </div>
         </div>
@@ -305,14 +312,14 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p class="last-des">Are there any programs and therapy you would like but not currently use?</p>
+                <p class="last-des">Are there any equipment, aid or modification supports you would like but don't currently have?</p>
                 <div class="last-textbox">
                     <textarea class="last-textarea" id="not-currently-use">{{ textareas.not_currently_use.0 }}</textarea>
                 </div>
             </div>
         </div>
         <div style="margin-top: 40px">
-            <a class="btn btn-lg btn-primary" href="/MMW/program/">&lt; Go Back</a>
+            <a class="btn btn-lg btn-primary" href="/MMW/program/">&lt;  Back</a>
             <input  class="btn btn-lg btn-primary m-l" type="button" value="Next >" onclick="submit_data()" style="float: right; margin-left: 30px;">
             <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" style="float: right; border-radius: 10px; width: 100px; height: 50px;">
         </div>
@@ -320,7 +327,7 @@
 </div>
 
 
-<!-- 删除确认的Modal -->
+
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">

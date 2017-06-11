@@ -11,8 +11,15 @@
   }
 </style>
 <div id="app">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/5.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
     <div class="header">
-        <h1>4. My Home</h1>
+        <h1>My Home</h1>
         <div>
             <img src="/static/mmw/image/flag.JPG">
         </div>
@@ -41,7 +48,7 @@
         </div>
         <div class="right col-md-6">
             <div class="input-block">
-                <h4>5. Do I use any equipment or other thins to help me at home?</h4>
+                <h4>5. Do I use any equipment or other things to help me at home?</h4>
                 <textarea class="right-textarea" rows="6" name="text5" id="area5">{{ myhome.text5 }}</textarea>
             </div>
             <div>
@@ -50,7 +57,7 @@
         </div>
     </div>
     <div class="bottom-button">
-        <a href="/MMW/importance/" class="btn btn-lg btn-primary">&lt; Go Back</a>
+        <a href="/MMW/importance/" class="btn btn-lg btn-primary">&lt;  Back</a>
         <input class="submit" type="submit" value="Next >" style="float:right">
         <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" style="float:right">
     </div>

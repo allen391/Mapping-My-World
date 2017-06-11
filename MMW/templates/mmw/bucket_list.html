@@ -59,6 +59,13 @@
     }
 </script>
 <div class="container">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/14.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
     <div class="row">
         <div class="col-md-12">
             <h1>My ultimate bucket list</h1>
@@ -76,7 +83,7 @@
                 </div>
             </div>
             <div style="margin-top: 25px">
-              <a class="btn btn-lg btn-primary" href="/MMW/long_term/">&lt; Go Back</a>
+              <a class="btn btn-lg btn-primary" href="/MMW/long_term/">&lt;  Back</a>
               <input type="submit" class="btn btn-lg btn-primary" value="Next >"  style="float: right; margin-left: 20px;">
               <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data(this)" style="float: right; border-radius: 10px; width: 100px; height: 50px;">
             </div>

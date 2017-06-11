@@ -49,6 +49,13 @@
     }
 </script>
 <div id="app">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/12.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
     <h1>My short term dreams and goals: next 12 months</h1>
     <p class="des">Think about: daily living, home, relationships. health&wellbeing, lifelong learning, work, social＆community and choice & control</p>
     <p class="des sub-title"><small>which goals are the most important to you in the next 12 months?</small></p>
@@ -57,7 +64,7 @@
             <textarea name="text" id="text">{{ instance.text }}</textarea>
         </div>
         <div style="margin-top: 25px">
-          <a class="btn btn-lg btn-primary" href="/MMW/mydream/">&lt; Go Back</a>
+          <a class="btn btn-lg btn-primary" href="/MMW/mydream/">&lt; Back</a>
           <input type="submit" class="btn btn-lg btn-primary" value="Next >"  style="float: right; margin-left: 20px;">
           <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data(this)" style="float: right; border-radius: 10px; width: 100px; height: 50px;">
         </div>

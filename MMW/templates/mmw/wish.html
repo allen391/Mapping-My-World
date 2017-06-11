@@ -70,7 +70,14 @@
   }
 </script>
 <div id="app">
-  <h1><strong>10. How I wish my week looked</strong></h1>
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/11.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
+  <h1><strong>How I wish my week looked</strong></h1>
   <p id="desc">Thinking about what you wrote was working well and what could work better in the
 previous questions, what would your ideal week look like? Don’t forget to include
 work, education, hobbies and relationships, if they are relevant to you. </p>
@@ -126,7 +133,7 @@ work, education, hobbies and relationships, if they are relevant to you. </p>
       </tr>
     </table>
     <div style="margin-top: 25px">
-      <a class="btn btn-lg btn-primary" href="/MMW/mydream/">&lt; Go Back</a>
+      <a class="btn btn-lg btn-primary" href="/MMW/mydream/">&lt; Back</a>
       <input type="button" class="btn btn-lg btn-primary" value="Next >" onclick="submit_data()" style="float: right; margin-left: 20px;">
       <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" style="float: right; border-radius: 10px; width: 100px; height: 50px;">
     </div>

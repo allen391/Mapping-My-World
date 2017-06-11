@@ -24,6 +24,12 @@
     th {
         font-size: x-large;
     }
+    #save-image {
+        margin-right: 36px;
+        border-radius: 10px;
+        width: 100px;
+        height: 50px;
+    }
 </style>
 <script>
     get_day_data = function(dom) {
@@ -66,7 +72,14 @@
     }
 </script>
 <div id="app">
-   <h1>5. My Daily activities</h1>
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/6.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
+   <h1>My Daily activities</h1>
    <p class="desc"> How do you spend your average week currently? As well as writing down what you do now, think about what is working well and what is not working well as this will be useful for later in the booklet</p>
     <ul id="invite_tabs" class="nav nav-tabs" role="tablist">
       <li  class="nav-item">
@@ -150,9 +163,10 @@
             </div>
         </div>
     </div>
-    <a class="btn btn-lg btn-primary" href="/MMW/myhome/" style="margin-top: 20px">&lt; Go Back</a>
+    <a class="btn btn-lg btn-primary" href="/MMW/myhome/" style="margin-top: 20px">&lt;   Back</a>
     <div style="float: right; margin-top: 20px">
-        <button class="btn btn-lg btn-primary" onclick="save_data()">save</button>
+        <!--<button class="btn btn-lg btn-primary" onclick="save_data()">save</button>-->
+        <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" style="">
         <button class="btn btn-lg btn-primary" style="margin-left: 20px;" onclick="save_data_and_next()">Next &gt;</button>
     </div>
 </div>

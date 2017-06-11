@@ -96,6 +96,13 @@ class Importance(models.Model):
             verbose_name = "Important people to me"
             verbose_name_plural = "Important people to me"
 
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
+
 
 class MyHome(models.Model):
     user = models.OneToOneField(User)
@@ -154,6 +161,14 @@ class Program(models.Model):
             verbose_name = "My program and therapy supports"
             verbose_name_plural = "My program and therapy supports"
 
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
+
+
 class Equipment(models.Model):
     user = models.OneToOneField(User)
     data = models.TextField("My programs and therapy supports: ")
@@ -161,6 +176,13 @@ class Equipment(models.Model):
     class Meta:
             verbose_name = "My equipment, aid or modification supports"
             verbose_name_plural = "My equipment, aid or modification supports"
+
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
 
 
 class Wish(models.Model):
@@ -171,6 +193,13 @@ class Wish(models.Model):
             verbose_name = "How I wish my week looked"
             verbose_name_plural = "How I wish my week looked"
 
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
+
 
 class Short_term(models.Model):
     user = models.OneToOneField(User)
@@ -180,12 +209,27 @@ class Short_term(models.Model):
             verbose_name = "My short term dreams and goals：next 12 months"
             verbose_name_plural = "My short term dreams and goals：next 12 months"
 
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
+
+
 class Long_term(models.Model):
     user = models.OneToOneField(User)
     text = models.TextField("What would you like to achieve in the next five years? ")
     class Meta:
             verbose_name = "My long term dreams and goals: the future"
             verbose_name_plural = "My long term dreams and goals: the future"
+
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
 
 
 class Bulk_list(models.Model):
@@ -195,11 +239,24 @@ class Bulk_list(models.Model):
             verbose_name = "My ultimate bucket list"
             verbose_name_plural = "My ultimate bucket list"
 
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
 
 
 class WeeklySupport(models.Model):
     user = models.OneToOneField(User)
     text = models.TextField("If you had one ultimate wish, what would it be？", default=json.dumps([]))
+
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
 
 
 class Health(models.Model):
@@ -208,6 +265,13 @@ class Health(models.Model):
     class Meta:
             verbose_name = "My health and wellbeing"
             verbose_name_plural = "My health and wellbeing"
+
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email
 
 
 class Activity(models.Model):
@@ -340,3 +404,10 @@ class Activity(models.Model):
     class Meta:
             verbose_name = "My daily activities"
             verbose_name_plural = "My daily activities"
+
+    @property
+    def name(self):
+        return self.user.userinfo.name
+
+    def email(self):
+        return self.user.userinfo.email

@@ -74,11 +74,18 @@
     </style>
 
     <div id="app">
+        <audio id="bgMusic">
+            <source src="/static/mmw/mp3/2.mp3" type="audio/mp3">
+        </audio>
+        <script>
+          var mp3_dom = document.getElementById("bgMusic");
+          mp3_dom.play();
+        </script>
         <div id="header">
-            <h1>1. Who I am</h1>
+            <h1>Who I am</h1>
             <img id="header-image" src="/static/mmw/image/people.JPG">
         </div>
-        <p id="header-content"><strong>My feeling, my beliefs and my attitudes are important to how i act, think and express myself</strong></p>
+        <p id="header-content">My feeling, my beliefs and my attitudes are important to how i act, think and express myself</p>
         <form method="POST" action="/MMW/whoiam/">
             {% csrf_token %}
             <div class="textarea-body">
@@ -95,7 +102,7 @@
                     </div>
                 </div>
                 <div class="input-block">
-                    <p>What dp other people like about me?</p>
+                    <p>What do other people like about me?</p>
                     <div class="textarea-block">
                         <textarea name="text3" id="area3">{{ whoiam.text3 }}</textarea>
                     </div>

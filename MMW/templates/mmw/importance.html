@@ -108,6 +108,13 @@
 
 </style>
 <div id="app">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/4.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
     <img id="bg-img" src="/static/mmw/image/importance_bg.jpg">
     <form method="post" action="/MMW/importance/">
         <input id="area1" value="{{importance.my_family}}" name="my-family" type="text">
@@ -119,7 +126,7 @@
         <input id="area7" value="{{importance.friends}}" name="friends" type="text">
         <input id="area8" value="{{importance.home_supporters}}" name="home-supporters" type="text">
         <div class="bottom-button">
-            <button class="btn btn-lg btn-primary"><a style="color:white" href="/MMW/communication/">&lt; Go Back</a></button>
+            <button class="btn btn-lg btn-primary"><a style="color:white" href="/MMW/communication/">&lt;  Back</a></button>
             <input class="submit" type="submit" value="Next >"  style="float: right" >
             <img id="save-image" src="/static/mmw/image/save.jpg" onclick="send_request()" style="float: right" >
         </div>

@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="/static/mmw/supports.css">
 </head>
 <body onload="init()">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/7.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
     <div id="app">
         <div id="header">
             <h1>6. My weekly supports</h1>

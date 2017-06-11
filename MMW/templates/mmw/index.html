@@ -28,6 +28,13 @@
     </style>
   </head>
   <body onload="init()">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/welcome_to_mapping_my_world.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
     <div id="app">
       <div id="container">
         <div>

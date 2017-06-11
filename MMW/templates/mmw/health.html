@@ -73,12 +73,19 @@
     }
 </style>
 <div onload="init()" id="app">
+    <audio id="bgMusic">
+        <source src="/static/mmw/mp3/8.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      var mp3_dom = document.getElementById("bgMusic");
+      mp3_dom.play();
+    </script>
     <div class="container">
         <div class="row">
             <div class="col-md-12 container-box">
                 <div class="header-content" id="header">
 
-                    <h1>7. My health and wellbeing</h1>
+                    <h1>My health and wellbeing</h1>
                     <img style="width: 70px; height: 70px; margin-right: 50px" src="/static/mmw/image/program.PNG">
                 </div>
             </div>
@@ -87,7 +94,7 @@
             <div class="col-md-12 container-box">
                 <p class="box-intro">My current health concerns or challenges</p>
                 <div class="text-box">
-                    <p style="font-size: 10px">[Example: I've got high blood pressure and diabetes]</p>
+                    <p style="font-size: 10px"><b>[Example: I've got high blood pressure and diabetes]</b></p>
                     <textarea class="inner-textarea">{{data.0}}</textarea>
                 </div>
             </div>
@@ -96,7 +103,7 @@
             <div class="col-md-12 container-box">
                 <p class="box-intro">Important things to me about my health are:</p>
                 <div class="text-box">
-                    <p style="font-size: 10px">[Example: Keeping fit and healthy]</p>
+                    <p style="font-size: 10px"><b>[Example: Keeping fit and healthy]</b></p>
                     <textarea class="inner-textarea">{{data.1}}</textarea>
                 </div>
             </div>
@@ -105,7 +112,7 @@
             <div class="col-md-12">
                 <p class="box-intro">What is going well with my health</p>
                 <div class="text-box">
-                    <p style="font-size: 10px">[Example: I eat a balanced diet]</p>
+                    <p style="font-size: 10px"><b>[Example: I eat a balanced diet]</b></p>
                     <textarea class="inner-textarea">{{data.2}}</textarea>
                 </div>
             </div>
@@ -114,13 +121,13 @@
             <div class="col-md-12">
                 <p class="box-intro">What is not working well with my health</p>
                 <div class="text-box">
-                    <p style="font-size: 10px">[Example: I'd like to reduce my weight by joining an exercise class. I need to find a suitable class and someone to take me]</p>
+                    <p style="font-size: 10px"><b>Example: I'd like to reduce my weight by joining an exercise class. I need to find a suitable class and someone to take me]</b></p>
                     <textarea class="inner-textarea">{{data.3}}</textarea>
                 </div>
             </div>
         </div>
         <div class="bottom-button">
-            <a href="/MMW/weeklysupport/" class="btn btn-lg btn-primary">&lt; Go Back</a>
+            <a href="/MMW/weeklysupport/" class="btn btn-lg btn-primary">&lt;  Back</a>
             <input class="submit" type="submit" value="Next >" onclick="save_data_next()" style="float: right">
             <img id="save-image" src="/static/mmw/image/save.jpg" onclick="save_data()" style="float: right">
         </div>
